@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="dark" data-light-theme="light" data-dark-theme="dark_dimmed"
+    data-a11y-animated-images="system" data-a11y-link-underlines="true" data-turbo-loaded="" class="js-focus-visible"
+    data-js-focus-visible="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="cid:css-bd55e238-ea8c-4be3-b45c-35080fd213d0@mhtml.blink">
+    <link rel="stylesheet" type="text/css" href="cid:css-a7fdffd4-65cc-4d9f-8dce-3a102edc344a@mhtml.blink">
+    <link rel="stylesheet" type="text/css" href="cid:css-06f64bd5-6741-42c2-98f2-ef955d0d25e6@mhtml.blink">
+    <link rel="stylesheet" type="text/css" href="cid:css-22c3b397-b46a-412f-8f00-6753a0d0ddc0@mhtml.blink">
+    <link rel="stylesheet" type="text/css" href="cid:css-637ca6c6-60eb-470d-a7bb-3ab16b0c28db@mhtml.blink">
+    <link rel="stylesheet" type="text/css" href="cid:css-aa28e10e-c460-4e26-830a-0ab372d62696@mhtml.blink">
+    <link rel="stylesheet" type="text/css" href="cid:css-66480057-35f5-4d71-be31-6edb0a27801e@mhtml.blink">
+    <link rel="stylesheet" type="text/css" href="cid:css-4981fade-48a8-4595-bd73-a37e32f19829@mhtml.blink">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/dark_dimmed-afda8eb0fb33.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/primer-primitives-4cf0d59ab51a.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/primer-css-layers-197f36491ed6.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/global-d50796f51147.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/github-e4eed26e112b.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/repository-0f7cf89e325a.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/code-84c85cb29e52.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/primer-react-css.ae7959f1a60166af593d.module.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/notifications-subscriptions-menu.1bcff9205c241e99cff2.module.css">
+    <meta http-equiv="x-pjax-version" content="ffbd4a2ea61a0224d0da926bcffb4d1729dce141423199b555341997c2e3be69"
+        data-turbo-track="reload">
+    <meta http-equiv="x-pjax-csp-version" content="43bc2a0e2750a1219c17b5bf1ec22aae37041bbc018bc5e27bb7708f80e7ab88"
+        data-turbo-track="reload">
+    <meta http-equiv="x-pjax-css-version" content="d899a446d5934f6bc7d9bf3f43c99703618d7a94ff9b24a140e021de63cf0ca6"
+        data-turbo-track="reload">
+    <meta http-equiv="x-pjax-js-version" content="7d7da1c45c428c8709968491ef660dce61d3c939d75ba505f13626b4ab3fed8f"
+        data-turbo-track="reload">
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/react-code-view.0c44c510c8fe603a5ebe.module.css">
+    <link rel="dns-prefetch" href="https://github.githubassets.com/">
+    <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
+    <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+    <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+    <link rel="preconnect" href="https://github.githubassets.com/" crossorigin="">
+    <link rel="preconnect" href="https://avatars.githubusercontent.com/">
+    <title>All-notes/05_Programs-2.md at master · SachinKn-notes/All-notes</title>
+    <meta name="route-pattern" content="/:user_id/:repository/blob/*name(/*path)" data-turbo-transient="">
+    <meta name="route-controller" content="blob" data-turbo-transient="">
+    <meta name="route-action" content="show" data-turbo-transient="">
+    <meta name="current-catalog-service-hash"
+        content="f3abb0cc802f3d7b95fc8762b94bdcb13bf39634c40c357301c4aa1d67a256fb">
+    <meta name="request-id" content="EE86:12A33E:DEA748:F2939D:66E415DC" data-turbo-transient="true">
+    <meta name="html-safe-nonce" content="15ad9c5dc602ef8586f8dbae80337ec05f27b3ec33b083581b36d228160ca914"
+        data-turbo-transient="true">
+    <meta name="visitor-payload"
+        content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9TYWNoaW5Lbi1ub3Rlcy9BbGwtbm90ZXMiLCJyZXF1ZXN0X2lkIjoiRUU4NjoxMkEzM0U6REVBNzQ4OkYyOTM5RDo2NkU0MTVEQyIsInZpc2l0b3JfaWQiOiI2NTEwNDM4MjY3OTcyOTkzMzY4IiwicmVnaW9uX2VkZ2UiOiJjZW50cmFsaW5kaWEiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0="
+        data-turbo-transient="true">
+    <meta name="visitor-hmac" content="24c3e24e2975f77d9db01158065acdc0d517a356c8aaec08f8a4c02d1d291ae0"
+        data-turbo-transient="true">
+    <meta name="hovercard-subject-tag" content="repository:803590159" data-turbo-transient="">
+    <meta name="github-keyboard-shortcuts" content="repository,source-code,file-tree,copilot"
+        data-turbo-transient="true">
+    <meta name="selected-link" value="repo_source" data-turbo-transient="">
+    <link rel="assets" href="https://github.githubassets.com/">
+    <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
+    <meta name="octolytics-url" content="https://collector.github.com/github/collect">
+    <meta name="octolytics-actor-id" content="106311617">
+    <meta name="octolytics-actor-login" content="sachinknsachi">
+    <meta name="octolytics-actor-hash" content="475c0fcf9f364e2c2a719dae0b5e38926ed567f923e1bc92e1cb28890e1000b2">
+    <meta name="analytics-location" content="/<user-name>/<repo-name>/blob/show" data-turbo-transient="true">
+    <meta name="user-login" content="sachinknsachi">
+    <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+    <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-transient="">
+    <meta data-hydrostats="publish">
+    <meta name="go-import"
+        content="github.com/SachinKn-notes/All-notes git https://github.com/SachinKn-notes/All-notes.git">
+    <meta name="octolytics-dimension-user_id" content="172102101">
+    <meta name="octolytics-dimension-user_login" content="SachinKn-notes">
+    <meta name="octolytics-dimension-repository_id" content="803590159">
+    <meta name="octolytics-dimension-repository_nwo" content="SachinKn-notes/All-notes">
+    <meta name="octolytics-dimension-repository_public" content="false">
+    <meta name="octolytics-dimension-repository_is_fork" content="false">
+    <meta name="octolytics-dimension-repository_network_root_id" content="803590159">
+    <meta name="octolytics-dimension-repository_network_root_nwo" content="SachinKn-notes/All-notes">
+    <meta name="turbo-body-classes" content="logged-in env-production page-responsive">
+    <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000">
+    <link rel="alternate icon" class="js-site-favicon" type="image/png"
+        href="https://github.githubassets.com/favicons/favicon.png">
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml"
+        href="https://github.githubassets.com/favicons/favicon.svg">
+    <meta name="theme-color" content="#1e2327">
+    <meta name="color-scheme" content="dark light">
+    <link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="res/styles/style.css">
+</head>
+
+<body>
+    <div class="Box-sc-g0xbh4-0 iJmJly">
+        <div class="Box-sc-g0xbh4-0 jACbi container">
+            <div class="Box-sc-g0xbh4-0 inTibH">
+                <section aria-labelledby="file-name-id-wide file-name-id-mobile" class="Box-sc-g0xbh4-0 eRvpKx">
+                    <div class="Box-sc-g0xbh4-0 cTsUqU js-snippet-clipboard-copy-unpositioned" data-hpc="true">
+                        <article class="markdown-body entry-content container-lg" itemprop="text">
+                            <div class="markdown-heading" dir="auto">
+                                <h1 tabindex="-1" class="heading-element" dir="auto">Manual Testing.</h1><a id="user-content-manual-testing" class="anchor" aria-label="Permalink: Manual Testing." href="#manual-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">1. Types of Testing.</h2><a id="user-content-1-types-of-testing" class="anchor" aria-label="Permalink: 1. Types of Testing." href="#1-types-of-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">a. White box testing.</h3><a id="user-content-a-white-box-testing" class="anchor" aria-label="Permalink: a. White box testing." href="#a-white-box-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Testing each &amp; every logic written by the developer is called White box testing.
+                                </li>
+                                <li>it is done by the developers before giving the software to testing team.</li>
+                                <li>We need programming knowledge to do White box testing.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">b. Black box testing.</h3><a id="user-content-b-black-box-testing" class="anchor" aria-label="Permalink: b. Black box testing." href="#b-black-box-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Testing the Functionality or Behaviour of an application againest the Customer
+                                    Requirement Specification is called Black Box Testing.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">Types of Black Box Testing.</h4><a id="user-content-types-of-black-box-testing" class="anchor" aria-label="Permalink: Types of Black Box Testing." href="#types-of-black-box-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li>Functional Testing.</li>
+                                <li>Integration Testing.</li>
+                                <li>System Testing.</li>
+                                <li>Acceptance Testing.</li>
+                                <li>Smoke Testing.</li>
+                                <li>Sanity Testing.</li>
+                                <li>Regression Testing.</li>
+                                <li>Usability Testing.</li>
+                                <li>Ad-hoc Testing.</li>
+                                <li>Exploratory Testing.</li>
+                                <li>Globalization Testing.</li>
+                            </ol>
+                            <ul dir="auto">
+                                <li>Internationalization (I18N) Testing.</li>
+                                <li>Localization (L10N) Testing.</li>
+                            </ul>
+                            <ol start="12" dir="auto">
+                                <li>Compatability Testing.</li>
+                                <li>Performance Testing.</li>
+                                <li>Accessability Testing.</li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">1. Functional Testing.</h5><a id="user-content-1-functional-testing" class="anchor" aria-label="Permalink: 1. Functional Testing." href="#1-functional-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing each &amp; every component of an application throughly against customer requirement specification is called Functional testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">2. Integration Testing.</h5><a id="user-content-2-integration-testing" class="anchor" aria-label="Permalink: 2. Integration Testing." href="#2-integration-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the data flow between two or more dependent modules/features is called integration testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">3. System Testing.</h5><a id="user-content-3-system-testing" class="anchor" aria-label="Permalink: 3. System Testing." href="#3-system-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>System testing focuses on verifying both functional &amp; non functional requirements.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">4. Acceptance Testing.</h5><a id="user-content-4-acceptance-testing" class="anchor" aria-label="Permalink: 4. Acceptance Testing." href="#4-acceptance-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>It is an end-to-end testing done by test engineer sitting in the client place where in they take real time business scenarios &amp; check whether the software is working as expected</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">5. Smoke Testing.</h5><a id="user-content-5-smoke-testing" class="anchor" aria-label="Permalink: 5. Smoke Testing." href="#5-smoke-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the basic/critical features of an application before doing through testing is called smoke testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">6. Sanity Testing.</h5><a id="user-content-6-sanity-testing" class="anchor" aria-label="Permalink: 6. Sanity Testing." href="#6-sanity-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Sanity testing is done to check that newly added functionalities, bugs, etc., have been fixed.</code>
+                            </p>
+                            <p dir="auto"><strong>Difference B/w Smoke &amp; Sanity Testing.</strong></p>
+                            <markdown-accessiblity-table data-catalyst="">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>Smoke</th>
+                                            <th>Sanity</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>Smoke test is done to make sure that the critical
+                                                        functionalities of the program are working fine</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>Sanity testing is done to check that newly added
+                                                        functionalities, bugs, etc., have been fixed</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>The software build may be either stable or unstable during smoke
+                                                        testing</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>The software build is relatively stable at the time of sanity
+                                                        testing</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>Smoke testing is done as a part of basic testing</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>Whereas sanity testing is done as part of regression testing
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>Smoke testing is like a general health checkup</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul dir="auto">
+                                                    <li>While sanity testing resembles a specialized health checkup</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </markdown-accessiblity-table>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">7. Regression Testing.</h5><a id="user-content-7-regression-testing" class="anchor" aria-label="Permalink: 7. Regression Testing." href="#7-regression-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the unchanged modules/features to make sure it is not broken because of new changes is called Regression Testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">8. Usability Testing.</h5><a id="user-content-8-usability-testing" class="anchor" aria-label="Permalink: 8. Usability Testing." href="#8-usability-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the user friendlyness of an application is called Usability Testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">9. Ad-hoc Testing.</h5><a id="user-content-9-ad-hoc-testing" class="anchor" aria-label="Permalink: 9. Ad-hoc Testing." href="#9-ad-hoc-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the application randomly without refering any formal documents like Requirement, Test cases &amp; Test Scenarios is called Adhoc Testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">10. Exploratory Testing.</h5><a id="user-content-10-exploratory-testing" class="anchor" aria-label="Permalink: 10. Exploratory Testing." href="#10-exploratory-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Exploreing the application &amp; understanding all the features, then based on understanding identify all the posible scenarios &amp; document it. Then reffre the document and test the application is called Exploratory testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">11. Globalization Testing.</h5><a id="user-content-11-globalization-testing" class="anchor" aria-label="Permalink: 11. Globalization Testing." href="#11-globalization-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the software which is developed for multiple languages is called globalization.</code>
+                            </p>
+                            <ul dir="auto">
+                                <li>
+                                    <p dir="auto"><strong>Types of Globalization Testing.</strong></p>
+                                    <div class="markdown-heading" dir="auto">
+                                        <h6 tabindex="-1" class="heading-element" dir="auto">i. Internationalization
+                                            (I18N) Testing.</h6><a id="user-content-i-internationalization-i18n-testing" class="anchor" aria-label="Permalink: i. Internationalization (I18N) Testing." href="#i-internationalization-i18n-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                                <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                    <p dir="auto">
+                                        <code>Verifying whether the right content is displayed in right language &amp; in right place is called I18N testing.</code>
+                                    </p>
+                                    <div class="markdown-heading" dir="auto">
+                                        <h6 tabindex="-1" class="heading-element" dir="auto">ii. Localization (L10N)
+                                            Testing.</h6><a id="user-content-ii-localization-l10n-testing" class="anchor" aria-label="Permalink: ii. Localization (L10N) Testing." href="#ii-localization-l10n-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                                <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                    <p dir="auto">
+                                        <code>Verifying whether the features are changing locally according to country standard or culture is called L10N testing.</code>
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">12. Compatability Testing.</h5><a id="user-content-12-compatability-testing" class="anchor" aria-label="Permalink: 12. Compatability Testing." href="#12-compatability-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the application on different platform is called Compatability Testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">13. Performance Testing.</h5><a id="user-content-13-performance-testing" class="anchor" aria-label="Permalink: 13. Performance Testing." href="#13-performance-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the stability &amp; response time of an application by applying load is called as performance testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">14. Accessability Testing.</h5><a id="user-content-14-accessability-testing" class="anchor" aria-label="Permalink: 14. Accessability Testing." href="#14-accessability-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Testing the application from physically challenged person's point of view is called as accessibility testing.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">2. Test Case Design technique.</h2>
+                                <a id="user-content-2-test-case-design-technique" class="anchor" aria-label="Permalink: 2. Test Case Design technique." href="#2-test-case-design-technique"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Error guessing technique.</li>
+                                <li>Equivalence partitioning.
+                                    <ul dir="auto">
+                                        <li>Pressmen rule.</li>
+                                        <li>Practice technique.</li>
+                                    </ul>
+                                </li>
+                                <li>Boundry value Analysis.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">3. Traceability Matrix</h2><a id="user-content-3-traceability-matrix" class="anchor" aria-label="Permalink: 3. Traceability Matrix" href="#3-traceability-matrix"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>It is a document which ensures that every requirement got atleast 1 test case.</code>
+                            </p>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">4. Severity.</h2><a id="user-content-4-severity" class="anchor" aria-label="Permalink: 4. Severity." href="#4-severity"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <code>Severity is decided based on the impact of defect on customer bussiness.</code>
+                            </p>
+                            <p dir="auto"><strong>Levels of Severity are</strong></p>
+                            <ul dir="auto">
+                                <li>Blocker</li>
+                                <li>Critical</li>
+                                <li>Major</li>
+                                <li>Minor</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">5. Priority.</h2><a id="user-content-5-priority" class="anchor" aria-label="Permalink: 5. Priority." href="#5-priority"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto"><code>Which defect has to be fixed first is decided by priority.</code></p>
+                            <p dir="auto"><strong>Levels of Priority are</strong></p>
+                            <ul dir="auto">
+                                <li>High</li>
+                                <li>Medium</li>
+                                <li>Low</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">6. STLC</h2><a id="user-content-6-stlc" class="anchor" aria-label="Permalink: 6. STLC" href="#6-stlc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>STLC stands for Software Testing Life Cycle.</li>
+                            </ul>
+                            <section class="js-render-needs-enrichment render-needs-enrichment position-relative" data-identity="e30473c8-fd7e-419c-bc7b-ec65f2defb1b" data-host="https://viewscreen.githubusercontent.com" data-src="https://viewscreen.githubusercontent.com/markdown/mermaid?docs_host=https%3A%2F%2Fdocs.github.com" data-type="mermaid" aria-label="mermaid rendered output container">
+                                <img src="res/images/stlc.png" alt="">
+                            </section>
+
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">7. SDLC</h2><a id="user-content-7-sdlc" class="anchor" aria-label="Permalink: 7. SDLC" href="#7-sdlc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">a. Introduction to SDLC / What is
+                                    SDLC.</h3><a id="user-content-a-introduction-to-sdlc--what-is-sdlc" class="anchor" aria-label="Permalink: a. Introduction to SDLC / What is SDLC." href="#a-introduction-to-sdlc--what-is-sdlc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>SDLC stands for <strong>Software Development Life Cycle</strong>.</li>
+                                <li>SDLC is a set of processes and methodologies used to develop high-quality software.
+                                </li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">b. Phases of SDLC.</h3><a id="user-content-b-phases-of-sdlc" class="anchor" aria-label="Permalink: b. Phases of SDLC." href="#b-phases-of-sdlc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <section class="js-render-needs-enrichment render-needs-enrichment position-relative" data-identity="fd76f06c-23b9-4ba2-9e72-493475572e79" data-host="https://viewscreen.githubusercontent.com" data-src="https://viewscreen.githubusercontent.com/markdown/mermaid?docs_host=https%3A%2F%2Fdocs.github.com" data-type="mermaid" aria-label="mermaid rendered output container">
+                                <img src="res/images/sdlc.png" alt="">
+                            </section>
+
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">1. Requirement Gathering.</h4><a id="user-content-1-requirement-gathering" class="anchor" aria-label="Permalink: 1. Requirement Gathering." href="#1-requirement-gathering"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Will be done by BA/PO (Business Analyst/Product Owner).</li>
+                                <li>BA/PO Will Create a User Story.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">2. Feasibility Study.</h4><a id="user-content-2-feasibility-study" class="anchor" aria-label="Permalink: 2. Feasibility Study." href="#2-feasibility-study"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Will be done by a team consists of
+                                    <ul dir="auto">
+                                        <li>BA/PO (Business Analyst/Product Owner)</li>
+                                        <li>PM (Product Manager).</li>
+                                        <li>Architects.</li>
+                                        <li>HR Team.</li>
+                                        <li>Finance Team.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">3. Design.</h4><a id="user-content-3-design" class="anchor" aria-label="Permalink: 3. Design." href="#3-design"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Will be done by Architects &amp; Sr. Developers.</li>
+                                <li>Design will be of 2 types.
+                                    <ul dir="auto">
+                                        <li>High level design.</li>
+                                        <li>Low level design.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">4. Development.</h4><a id="user-content-4-development" class="anchor" aria-label="Permalink: 4. Development." href="#4-development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Will be done by Developers.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">5. Testing.</h4><a id="user-content-5-testing" class="anchor" aria-label="Permalink: 5. Testing." href="#5-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Will be done by Test Engineers.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">6. Deployment.</h4><a id="user-content-6-deployment" class="anchor" aria-label="Permalink: 6. Deployment." href="#6-deployment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Will be done by DEVOPS Team.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">7. Maintenance.</h4><a id="user-content-7-maintenance" class="anchor" aria-label="Permalink: 7. Maintenance." href="#7-maintenance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Will be done by
+                                    <ul dir="auto">
+                                        <li>Users.</li>
+                                        <li>Test Engineers.</li>
+                                        <li>Support Team.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">c. Models of SDLC / Methodologies
+                                    of SDLC.</h3><a id="user-content-c-models-of-sdlc--methodologies-of-sdlc" class="anchor" aria-label="Permalink: c. Models of SDLC / Methodologies of SDLC." href="#c-models-of-sdlc--methodologies-of-sdlc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li>Waterfall model. ✔</li>
+                                <li>Spiral model. ❌</li>
+                                <li>V&amp;V model. ❌</li>
+                                <li>Prototype model. ❌</li>
+                                <li>Derived model. ❌</li>
+                                <li>Hybrid model. ❌</li>
+                                <li>Agile model. ✔</li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">1. Waterfall model.</h4><a id="user-content-1-waterfall-model" class="anchor" aria-label="Permalink: 1. Waterfall model." href="#1-waterfall-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">i. What is Waterfall model?</h5><a id="user-content-i-what-is-waterfall-model" class="anchor" aria-label="Permalink: i. What is Waterfall model?" href="#i-what-is-waterfall-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>It is a step by step or standerd procedure to develop new software.</li>
+                                <li>It is also know as Basic model(first), Treditional model(old) or sequential
+                                    model(step by step).</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">ii. Expline Waterfall model.</h5><a id="user-content-ii-expline-waterfall-model" class="anchor" aria-label="Permalink: ii. Expline Waterfall model." href="#ii-expline-waterfall-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto"><strong>1. Requirement Gathering.</strong></p>
+                            <ul dir="auto">
+                                <li>It is nothing but collecting the requirement from the customer place.</li>
+                                <li>It is done by BA/PA.</li>
+                                <li>BA will travel from company to customer place &amp; collect the requirement in the
+                                    form of business language and come back to company and convert business language
+                                    into software &amp; explain it to Dev, TE, PM, Architect, etc. this process is
+                                    called as Requirement collection.</li>
+                                <li>PA will act like bridge between company and customer.</li>
+                            </ul>
+                            <p dir="auto"><strong>2. Feasibility study.</strong></p>
+                            <ul dir="auto">
+                                <li>once after requirement collection is done we will go for feasibility study
+                                    stage/phase.</li>
+                                <li>Feasibility study is done by a team consists of PM, BA, Architects, HR team, Finance
+                                    team</li>
+                                <li>This is the stage where company will decide whether to take up the project or not,
+                                    and if they take up the project then company will check will they have sufficient
+                                    technologies, sufficient resources, sufficient labsetup. and this is the stage where
+                                    company will get to know whether they take up the project do they get profit or not.
+                                    this entire process is called as Feasibility study.</li>
+                            </ul>
+                            <p dir="auto"><strong>3. Design.</strong></p>
+                            <ul dir="auto">
+                                <li>Once after feasibility study is completed then we will go for Design stage/phase.
+                                </li>
+                                <li>It is done by Architects.</li>
+                                <li>In design there are 2 types.
+                                    <ol dir="auto">
+                                        <li>HLD (High Level Design) -
+                                            <code>Designing the architecture of an application is called as HLD</code>
+                                        </li>
+                                        <li>LLD (Low Level Design) -
+                                            <code>Designing each &amp; every individual modules in details is called as LLD</code>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ul>
+                            <p dir="auto"><strong>4. Development.</strong></p>
+                            <ul dir="auto">
+                                <li>Once after design is completed we will go for Coding stage or phase. It is done by
+                                    developers by looking it the requirement &amp; LLD.</li>
+                            </ul>
+                            <p dir="auto"><strong>5. Testing.</strong></p>
+                            <ul dir="auto">
+                                <li>Once after coding is completed developers will give software to the test engineers,
+                                    where in all the test engineers will test the software by entering all the possible
+                                    inputs into the software to find the defects in the software according to the
+                                    customer requirement is called as testing.</li>
+                            </ul>
+                            <p dir="auto"><strong>6. Deployment.</strong></p>
+                            <ul dir="auto">
+                                <li>Once after the testing is completed and software quality is good, we will go for
+                                    Installation/Implementation stage/phase.</li>
+                                <li>It is done by IT engg. / Field engg. / Site engg. / Implementation engg.</li>
+                                <li>IT enginerr from the company will travel to the customer place &amp; setup the
+                                    environment &amp; install the software so that customers can use the software and
+                                    run the business. this process is call as instalation or implimentation.</li>
+                            </ul>
+                            <p dir="auto"><strong>7. Maintenance.</strong></p>
+                            <ul dir="auto">
+                                <li>Once after the installation is completed then we go for maintenance phase/stage.
+                                </li>
+                                <li>Customers while using the software and running the business if they face any
+                                    problems or if they find any defects then company will give free service(Fixing the
+                                    defect, testing, and giving the new software) for the customers for a period of 6
+                                    months to 1 year based on the agreement between the customer and the company this
+                                    period is also known as maintenance period. Once after maintenance period is
+                                    completed, if customers face any problems or if customer need any
+                                    changes(adding/deleting/modifying the feature) then company will charge for the
+                                    customer.</li>
+                                <li>Maintenance will be done by Developers &amp; Test engineers.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">iii. Advantages of Waterfall model.
+                                </h5><a id="user-content-iii-advantages-of-waterfall-model" class="anchor" aria-label="Permalink: iii. Advantages of Waterfall model." href="#iii-advantages-of-waterfall-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Since requirement changes are not allowed while testing no of defects will be less.
+                                </li>
+                                <li>Software quality will be super good.</li>
+                                <li>It is a simple model to follow.</li>
+                                <li>Initial investment is less.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">iv. Drawbacks of waterfall model.
+                                </h5><a id="user-content-iv-drawbacks-of-waterfall-model" class="anchor" aria-label="Permalink: iv. Drawbacks of waterfall model." href="#iv-drawbacks-of-waterfall-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Requirement changes are not allowed.</li>
+                                <li>Total time taken is more.</li>
+                                <li>If there is any defect in the requirement it will flow till the coding phase. This
+                                    leads to lot of reworking and time consuming.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">v. Interview Questions.</h5><a id="user-content-v-interview-questions" class="anchor" aria-label="Permalink: v. Interview Questions." href="#v-interview-questions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto"><strong>1. Why the model is called as Waterfall model?</strong></p>
+                            <ul dir="auto">
+                                <li>Here back tracking is not possible, that means once after the feasibility study is
+                                    completed, requirements will be freazed, we cannot go back and take up the
+                                    requirement changes. So this model is called as Waterfall model or Sequentiol model.
+                                </li>
+                            </ul>
+                            <p dir="auto"><strong>2. For what kind of projects &amp; applications we can go for
+                                    waterfall model?</strong></p>
+                            <ul dir="auto">
+                                <li>For small and simple projects.</li>
+                                <li>when customers dont do requirement changes then we can go for waterfall madel.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h4 tabindex="-1" class="heading-element" dir="auto">7. Agile model.</h4><a id="user-content-7-agile-model" class="anchor" aria-label="Permalink: 7. Agile model." href="#7-agile-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto"><img src="res/images/agile.png"></img></p>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">i. What is Agile model.</h5><a id="user-content-i-what-is-agile-model" class="anchor" aria-label="Permalink: i. What is Agile model." href="#i-what-is-agile-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Agile is a set of principles for software development under which requirements and
+                                    solutions evolve through the collaborative effort of cross-functional teams.</li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">ii. When to Use the Agile Model?
+                                </h5><a id="user-content-ii-when-to-use-the-agile-model" class="anchor" aria-label="Permalink: ii. When to Use the Agile Model?" href="#ii-when-to-use-the-agile-model"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li>When the project size is large.</li>
+                                <li>When frequent changes are required.</li>
+                                <li>When a highly qualified and experienced team is available.</li>
+                                <li>When a customer is ready to have a meeting with a software team all the time.</li>
+                                <li>Projects with flexible timelines and budget.</li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">iii. Agile Methodologies.</h5><a id="user-content-iii-agile-methodologies" class="anchor" aria-label="Permalink: iii. Agile Methodologies." href="#iii-agile-methodologies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li><strong>Scrum</strong>: Iterative development with time-boxed sprints, daily
+                                    stand-up meetings, and roles such as Scrum Master and Product Owner.</li>
+                                <li><strong>Kanban</strong>: Visual management tool, focusing on continuous delivery and
+                                    improvement.</li>
+                                <li><strong>Extreme Programming (XP)</strong>: Emphasizes technical excellence and good
+                                    design, with practices like pair programming and test-driven development.</li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">iv. Scrum.</h5><a id="user-content-iv-scrum" class="anchor" aria-label="Permalink: iv. Scrum." href="#iv-scrum"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ul dir="auto">
+                                <li>Scrum is a widely used agile methodology/framework in software development. Scrum is
+                                </li>
+                                <li>Steps/Events involved in scrum activity.
+                                    <ul dir="auto">
+                                        <li>Planning meetings.</li>
+                                        <li>Execution.</li>
+                                        <li>Daily follow-up.</li>
+                                        <li>Review meeting.</li>
+                                        <li>Retrospective meeting.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">v. Roles.</h5><a id="user-content-v-roles" class="anchor" aria-label="Permalink: v. Roles." href="#v-roles"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li><strong>Product owner</strong> (PO)/BA.
+                                    <ul dir="auto">
+                                        <li>The Product Owner understands the requirements from a customer &amp;
+                                            communicate the requirements to the product development team.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Scrum master</strong>.
+                                    <ul dir="auto">
+                                        <li>Scrum master is a person who is responsible for delivey of software to the
+                                            customer within a planned period of time.</li>
+                                        <li>Scrum master will conduct daily standups.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Development team</strong>.
+                                    <ul dir="auto">
+                                        <li>Development team is responsible for developing a application.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Testing team</strong>.
+                                    <ul dir="auto">
+                                        <li>Testing team is responsible for testing the application and finding bugs
+                                            before deploying to production.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">vi. Key Ceremonies.</h5><a id="user-content-vi-key-ceremonies" class="anchor" aria-label="Permalink: vi. Key Ceremonies." href="#vi-key-ceremonies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li><strong>Sprint planning</strong> - Define goals and tasks for the sprint.</li>
+                                <li><strong>Daily Stand-Up</strong> - Short meeting to discuss progress and obstacles.
+                                </li>
+                                <li><strong>Sprint Review</strong> - Review the work done and gather feedback.</li>
+                                <li><strong>Sprint Retrospective</strong> - Reflect on the sprint and identify
+                                    improvements.</li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">vii. Artifacts.</h5><a id="user-content-vii-artifacts" class="anchor" aria-label="Permalink: vii. Artifacts." href="#vii-artifacts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li><strong>Product Backlog</strong> - List of all desired work on the project.</li>
+                                <li><strong>Sprint Backlog</strong> - List of tasks to be completed in the sprint.</li>
+                                <li><strong>Increment</strong> - The working product at the end of the sprint.</li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">viii. Benefits of Agile &amp;
+                                    Scrum.</h5><a id="user-content-viii-benefits-of-agile--scrum" class="anchor" aria-label="Permalink: viii. Benefits of Agile &amp; Scrum." href="#viii-benefits-of-agile--scrum"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <ol dir="auto">
+                                <li><strong>Flexibility:</strong> Easily adapt to changes in requirements.</li>
+                                <li><strong>Customer Satisfaction:</strong> Continuous delivery of valuable software.
+                                </li>
+                                <li><strong>Improved Quality:</strong> Regular testing and feedback loops.</li>
+                                <li><strong>Enhanced Collaboration:</strong> Close collaboration between team members
+                                    and stakeholders.</li>
+                                <li><strong>Faster Time-to-Market:</strong> Incremental releases provide early and
+                                    continuous delivery of valuable software.</li>
+                                <li><strong>Continuous Improvement:</strong> Regular retrospectives in Scrum drive
+                                    ongoing enhancements.</li>
+                            </ol>
+                            <div class="markdown-heading" dir="auto">
+                                <h5 tabindex="-1" class="heading-element" dir="auto">ix. Sprint. ⭐</h5><a id="user-content-ix-sprint-" class="anchor" aria-label="Permalink: ix. Sprint. ⭐" href="#ix-sprint-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p dir="auto">
+                                <img src="res/images/scrum-1.png" alt="the-sprint-1" style="max-width: 100%;">
+                                <img src="res/images/scrum-2.png" alt="the-sprint-2" style="max-width: 100%;">
+                            </p>
+                        </article>
+                    </div><button hidden="" data-hotkey="Control+a"></button>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="res/scripts/script.js"></script>
+</body>
+
+</html>
