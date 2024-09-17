@@ -5,92 +5,20 @@
 
     <head>
         <title>SQL Notes</title>
+        <link rel="icon" href="res/images/favicon-2.ico" />
     
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-        <link rel="stylesheet" type="text/css" href="cid:css-bd55e238-ea8c-4be3-b45c-35080fd213d0@mhtml.blink">
-        <link rel="stylesheet" type="text/css" href="cid:css-a7fdffd4-65cc-4d9f-8dce-3a102edc344a@mhtml.blink">
-        <link rel="stylesheet" type="text/css" href="cid:css-06f64bd5-6741-42c2-98f2-ef955d0d25e6@mhtml.blink">
-        <link rel="stylesheet" type="text/css" href="cid:css-22c3b397-b46a-412f-8f00-6753a0d0ddc0@mhtml.blink">
-        <link rel="stylesheet" type="text/css" href="cid:css-637ca6c6-60eb-470d-a7bb-3ab16b0c28db@mhtml.blink">
-        <link rel="stylesheet" type="text/css" href="cid:css-aa28e10e-c460-4e26-830a-0ab372d62696@mhtml.blink">
-        <link rel="stylesheet" type="text/css" href="cid:css-66480057-35f5-4d71-be31-6edb0a27801e@mhtml.blink">
-        <link rel="stylesheet" type="text/css" href="cid:css-4981fade-48a8-4595-bd73-a37e32f19829@mhtml.blink">
+        <link rel="stylesheet" href="res/styles/default/dark_dimmed-afda8eb0fb33.css">
+        <link rel="stylesheet" href="res/styles/default/primer-primitives-4cf0d59ab51a.css">
+        <link rel="stylesheet" href="res/styles/default/primer-css-layers-197f36491ed6.css">
+        <link rel="stylesheet" href="res/styles/default/global-e647c9e7e18c.css">
+        <link rel="stylesheet" href="res/styles/default/github-e4eed26e112b.css">
+        <link rel="stylesheet" href="res/styles/default/repository-0f7cf89e325a.css">
+        <link rel="stylesheet" href="res/styles/default/code-84c85cb29e52.css">
+        <link rel="stylesheet" href="res/styles/default/primer-react-css.ae7959f1a60166af593d.module.css">
+        <link rel="stylesheet" href="res/styles/default/notifications-subscriptions-menu.1bcff9205c241e99cff2.module.css">
     
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark_dimmed-afda8eb0fb33.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-primitives-4cf0d59ab51a.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-css-layers-197f36491ed6.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/global-d50796f51147.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/github-e4eed26e112b.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/repository-0f7cf89e325a.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/code-84c85cb29e52.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react-css.ae7959f1a60166af593d.module.css">
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/notifications-subscriptions-menu.1bcff9205c241e99cff2.module.css">
-        
-        <meta http-equiv="x-pjax-version" content="ffbd4a2ea61a0224d0da926bcffb4d1729dce141423199b555341997c2e3be69" data-turbo-track="reload">
-        <meta http-equiv="x-pjax-csp-version" content="43bc2a0e2750a1219c17b5bf1ec22aae37041bbc018bc5e27bb7708f80e7ab88" data-turbo-track="reload">
-        <meta http-equiv="x-pjax-css-version" content="d899a446d5934f6bc7d9bf3f43c99703618d7a94ff9b24a140e021de63cf0ca6" data-turbo-track="reload">
-        <meta http-equiv="x-pjax-js-version" content="7d7da1c45c428c8709968491ef660dce61d3c939d75ba505f13626b4ab3fed8f" data-turbo-track="reload">
-        
-        <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/react-code-view.0c44c510c8fe603a5ebe.module.css">
-        
-        <link rel="dns-prefetch" href="https://github.githubassets.com/">
-        <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
-        <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
-        <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
-    
-        <link rel="preconnect" href="https://github.githubassets.com/" crossorigin="">
-        <link rel="preconnect" href="https://avatars.githubusercontent.com/">
-    
-        <meta name="route-pattern" content="/:user_id/:repository/blob/*name(/*path)" data-turbo-transient="">
-        <meta name="route-controller" content="blob" data-turbo-transient="">
-        <meta name="route-action" content="show" data-turbo-transient="">
-        <meta name="current-catalog-service-hash" content="f3abb0cc802f3d7b95fc8762b94bdcb13bf39634c40c357301c4aa1d67a256fb">
-        <meta name="request-id" content="EE86:12A33E:DEA748:F2939D:66E415DC" data-turbo-transient="true">
-        <meta name="html-safe-nonce" content="15ad9c5dc602ef8586f8dbae80337ec05f27b3ec33b083581b36d228160ca914" data-turbo-transient="true">
-        <meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9TYWNoaW5Lbi1ub3Rlcy9BbGwtbm90ZXMiLCJyZXF1ZXN0X2lkIjoiRUU4NjoxMkEzM0U6REVBNzQ4OkYyOTM5RDo2NkU0MTVEQyIsInZpc2l0b3JfaWQiOiI2NTEwNDM4MjY3OTcyOTkzMzY4IiwicmVnaW9uX2VkZ2UiOiJjZW50cmFsaW5kaWEiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-turbo-transient="true">
-        <meta name="visitor-hmac" content="24c3e24e2975f77d9db01158065acdc0d517a356c8aaec08f8a4c02d1d291ae0" data-turbo-transient="true">
-        <meta name="hovercard-subject-tag" content="repository:803590159" data-turbo-transient="">
-        <meta name="github-keyboard-shortcuts" content="repository,source-code,file-tree,copilot" data-turbo-transient="true">
-        <meta name="selected-link" value="repo_source" data-turbo-transient="">
-    
-        <link rel="assets" href="https://github.githubassets.com/">
-    
-        <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
-        <meta name="octolytics-url" content="https://collector.github.com/github/collect">
-        <meta name="octolytics-actor-id" content="106311617">
-        <meta name="octolytics-actor-login" content="sachinknsachi">
-        <meta name="octolytics-actor-hash" content="475c0fcf9f364e2c2a719dae0b5e38926ed567f923e1bc92e1cb28890e1000b2">
-        <meta name="analytics-location" content="/<user-name>/<repo-name>/blob/show" data-turbo-transient="true">
-        <meta name="user-login" content="sachinknsachi">
-    
-        <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
-        
-        <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
-        <meta name="turbo-cache-control" content="no-cache" data-turbo-transient="">
-    
-        <meta data-hydrostats="publish">
-    
-        <meta name="go-import" content="github.com/SachinKn-notes/All-notes git https://github.com/SachinKn-notes/All-notes.git">
-        <meta name="octolytics-dimension-user_id" content="172102101">
-        <meta name="octolytics-dimension-user_login" content="SachinKn-notes">
-        <meta name="octolytics-dimension-repository_id" content="803590159">
-        <meta name="octolytics-dimension-repository_nwo" content="SachinKn-notes/All-notes">
-        <meta name="octolytics-dimension-repository_public" content="false">
-        <meta name="octolytics-dimension-repository_is_fork" content="false">
-        <meta name="octolytics-dimension-repository_network_root_id" content="803590159">
-        <meta name="octolytics-dimension-repository_network_root_nwo" content="SachinKn-notes/All-notes">
-        <meta name="turbo-body-classes" content="logged-in env-production page-responsive">
-        <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-        <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-    
-        <!-- <link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000">
-        <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-        <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg"> -->
-    
-        <meta name="theme-color" content="#1e2327">
-        <meta name="color-scheme" content="dark light">
-        <link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials">
         <link rel="stylesheet" href="res/styles/style.css">
     </head>
 
