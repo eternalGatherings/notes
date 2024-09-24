@@ -29,6 +29,10 @@
   max-height: calc(-64px + 92dvh);
 }
 
+.markdown-body .anchor {
+  margin-left: 0;
+}
+
 #popupBtn {
   position: absolute;
   right: 10px;
