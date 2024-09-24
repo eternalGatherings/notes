@@ -1,3 +1,27 @@
+@import url('./default/code-84c85cb29e52.css');
+@import url('./default/dark_dimmed-afda8eb0fb33.css');
+@import url('./default/github-6da540aa3f84.css');
+@import url('./default/github-e4eed26e112b.css');
+@import url('./default/global-e647c9e7e18c.css');
+@import url('./default/global-user-nav-drawer.830d6c10c9fea7fc134e.module.css');
+@import url('./default/notifications-subscriptions-menu.1bcff9205c241e99cff2.module.css');
+@import url('./default/primer-css-layers-197f36491ed6.css');
+@import url('./default/primer-f4d27dc36ca2.css');
+@import url('./default/primer-primitives-4cf0d59ab51a.css');
+@import url('./default/primer-react-css.0d8b6f1df73aed00eeda.module.css');
+@import url('./default/primer-react-css.ae7959f1a60166af593d.module.css');
+@import url('./default/react-code-view.cbc84db7f6a2b0bd0a66.module.css');
+@import url('./default/repository-0f7cf89e325a.css');
+
+@import url('./mhtlCss/mhtmlCss-1.css');
+@import url('./mhtlCss/mhtmlCss-2.css');
+@import url('./mhtlCss/mhtmlCss-3.css');
+@import url('./mhtlCss/mhtmlCss-4.css');
+@import url('./mhtlCss/mhtmlCss-5.css');
+@import url('./mhtlCss/mhtmlCss-6.css');
+@import url('./mhtlCss/mhtmlCss-7.css');
+@import url('./mhtlCss/mhtmlCss-8.css');
+
 .cTsUqU, .eoaCFS {
   border: 1px solid var(--borderColor-default, var(--color-border-default));
   padding: 10px 32px;
