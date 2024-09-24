@@ -1,8 +1,0 @@
-@charset "utf-8"; .user-mention[href$="/sachinknsachi"] {
-    color: var(--color-user-mention-fg);
-    background-color: var(--bgColor-attention-muted, var(--color-attention-subtle));
-    border-radius: 2px;
-    margin-left: -2px;
-    margin-right: -2px;
-    padding: 0px 2px;
-}
