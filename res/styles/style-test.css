@@ -16,18 +16,21 @@
 @import url("./test/react-code-view.cbc84db7f6a2b0bd0a66.module.css");
 @import url("./test/repository-0f7cf89e325a.css");
 
-/* .cTsUqU, .eoaCFS {
+.cTsUqU, .eoaCFS {
   border: 1px solid var(--borderColor-default, var(--color-border-default));
   padding: 10px 32px;
   margin: 10px 0;
   min-width: 0px;
   border-radius: 6px;
-} */
+  position: relative;
+}
 
 .iXYcHE {
   max-height: calc(-64px + 92dvh);
 }
 
-/* .kFCWIa {
-  background-color: rgba(0, 0, 0, 0);
-} */
+#popupBtn {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
