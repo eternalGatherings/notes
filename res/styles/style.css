@@ -20,7 +20,6 @@
 .eoaCFS {
   border: 1px solid var(--borderColor-default, var(--color-border-default));
   border-radius: 6px;
-  position: relative;
 }
 
 .iXYcHE {
@@ -32,9 +31,19 @@
 }
 
 #popupBtn {
-  position: absolute;
-  right: 10px;
-  top: 15px;
+  background-color: #6cb6ff;
+  color: #000;
+  position: fixed;
+  z-index: 5;
+  top: 30px;
+  transform: translateX(25px);
+  /* box-shadow: 0px 0px 8px rgb(108, 182, 255, 0.8); */
+  box-shadow: var(--shadow-floating-small, var(--color-overlay-shadow, 0 0 0 1px #444c56, 0 16px 32px rgba(28, 33, 40, 0.85)));
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .underl {
