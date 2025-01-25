@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="dark" data-light-theme="light" data-dark-theme="dark_dimmed"
+    data-a11y-animated-images="system" data-a11y-link-underlines="true" data-turbo-loaded="" class="js-focus-visible"
+    data-js-focus-visible="">
+
+<head>
+    <title>JavaScript Notes</title>
+    <link rel="icon" href="res/images/sachi-3.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="res/styles/style.css">
+</head>
+
+<body>
+    <div class="Box-sc-g0xbh4-0 ldRxiI">
+        <div class="Box-sc-g0xbh4-0 fVkfyA container">
+            <div class="Box-sc-g0xbh4-0 cxjaol">
+                <section aria-labelledby="file-name-id-wide file-name-id-mobile" class="Box-sc-g0xbh4-0 fGqKFv">
+                    <div class="Box-sc-g0xbh4-0 eoaCFS js-snippet-clipboard-copy-unpositioned undefined"
+                        data-hpc="true">
+                        <div class="button-container">
+                            <button id="popupBtn" data-component="IconButton" type="button" aria-label="Outline"
+                                aria-pressed="true"
+                                class="types__StyledButton-sc-ws60qy-0 jtLHoP prc-Button-IconButton-szpyj"
+                                data-loading="false" data-no-visuals="true" data-size="small"
+                                aria-describedby=":R6sptal9lab:-loading-announcement"><svg aria-hidden="true"
+                                    focusable="false" role="img" class="octicon octicon-list-unordered"
+                                    viewBox="0 0 16 16" width="16" height="16" fill="currentColor"
+                                    style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
+                                    <path
+                                        d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM2 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <article class="markdown-body entry-content container-lg" itemprop="text">
+                            <div class="markdown-heading" dir="auto">
+                                <h1 tabindex="-1" class="heading-element" dir="auto">JavaScript Notes.</h1><a
+                                    id="javascript-notes" class="anchor"
+                                    aria-label="Permalink: JavaScript Notes." href="#javascript-notes"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">1. For loops in js</h2><a
+                                    id="1-for-loops-in-js" class="anchor"
+                                    aria-label="Permalink: 1. For loops in js" href="#1-for-loops-in-js"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">i. for...i</h3><a
+                                    id="i-fori" class="anchor" aria-label="Permalink: i. for...i"
+                                    href="#i-fori"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1"
+                                        width="16" height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">namesList</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">"Apple"</span><span class="pl-kos">,</span> <span class="pl-s">"Mango"</span><span class="pl-kos">,</span> <span class="pl-s">"Banana"</span><span class="pl-kos">,</span> <span class="pl-s">"Grapes"</span><span class="pl-kos">,</span> <span class="pl-s">"Orange"</span><span class="pl-kos">]</span><span class="pl-kos">;</span>
+
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span><span class="pl-c1">=</span><span class="pl-c1">0</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">&lt;</span><span class="pl-s1">namesList</span><span class="pl-kos">.</span><span class="pl-c1">length</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">namesList</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let namesList = [&quot;Apple&quot;, &quot;Mango&quot;, &quot;Banana&quot;, &quot;Grapes&quot;, &quot;Orange&quot;];
+
+for (let i=0; i<namesList.length; i++) {
+    console.log(namesList[i]);
+}" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">ii. for...of (of will return values
+                                    one by one)</h3><a id="ii-forof-of-will-return-values-one-by-one"
+                                    class="anchor"
+                                    aria-label="Permalink: ii. for...of (of will return values one by one)"
+                                    href="#ii-forof-of-will-return-values-one-by-one"><svg class="octicon octicon-link"
+                                        viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">namesList</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">"Apple"</span><span class="pl-kos">,</span> <span class="pl-s">"Mango"</span><span class="pl-kos">,</span> <span class="pl-s">"Banana"</span><span class="pl-kos">,</span> <span class="pl-s">"Grapes"</span><span class="pl-kos">,</span> <span class="pl-s">"Orange"</span><span class="pl-kos">]</span><span class="pl-kos">;</span>
+
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-k">of</span> <span class="pl-s1">namesList</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">i</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let namesList = [&quot;Apple&quot;, &quot;Mango&quot;, &quot;Banana&quot;, &quot;Grapes&quot;, &quot;Orange&quot;];
+
+for (let i of namesList) {
+    console.log(i);
+}" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">iii. for...in (in will return keys
+                                    or index numbers one by one)</h3><a
+                                    id="iii-forin-in-will-return-keys-or-index-numbers-one-by-one"
+                                    class="anchor"
+                                    aria-label="Permalink: iii. for...in (in will return keys or index numbers one by one)"
+                                    href="#iii-forin-in-will-return-keys-or-index-numbers-one-by-one"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">namesObject</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span> <span class="pl-c1">fruit_1</span>:<span class="pl-s">"Apple"</span><span class="pl-kos">,</span> <span class="pl-c1">fruit_2</span>:<span class="pl-s">"Mango"</span><span class="pl-kos">,</span> <span class="pl-c1">fruit_3</span>:<span class="pl-s">"Banana"</span><span class="pl-kos">,</span> <span class="pl-c1">fruit_4</span>:<span class="pl-s">"Grapes"</span><span class="pl-kos">,</span> <span class="pl-c1">fruit_5</span>:<span class="pl-s">"Orange"</span><span class="pl-kos">}</span><span class="pl-kos">;</span>
+
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-k">in</span> <span class="pl-s1">namesObject</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">namesObject</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let namesObject = { fruit_1:&quot;Apple&quot;, fruit_2:&quot;Mango&quot;, fruit_3:&quot;Banana&quot;, fruit_4:&quot;Grapes&quot;, fruit_5:&quot;Orange&quot;};
+
+for (let i in namesObject) {
+    console.log(namesObject[i]);
+}" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">2. Regex</h2><a
+                                    id="2-regex" class="anchor" aria-label="Permalink: 2. Regex"
+                                    href="#2-regex"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1"
+                                        width="16" height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">i. Check whether it contains
+                                    somthing with pattern</h3><a
+                                    id="i-check-whether-it-contains-somthing-with-pattern" class="anchor"
+                                    aria-label="Permalink: i. Check whether it contains somthing with pattern"
+                                    href="#i-check-whether-it-contains-somthing-with-pattern"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">"The price is $123.45 and the discount is $12.34 and round total is 111"</span><span class="pl-kos">;</span>
+<span class="pl-k">let</span> <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-s">d</span><span class="pl-s">i</span><span class="pl-s">s</span><span class="pl-s">c</span><span class="pl-s">o</span><span class="pl-s">u</span><span class="pl-s">n</span><span class="pl-s">t</span><span class="pl-c1">/</span></span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">pattern</span><span class="pl-kos">.</span><span class="pl-en">test</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let str = &quot;The price is $123.45 and the discount is $12.34 and round total is 111&quot;;
+let pattern = /discount/
+
+console.log(pattern.test(str));" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">ii. Extract the first matching with
+                                    pattern.</h3><a id="ii-extract-the-first-matching-with-pattern"
+                                    class="anchor" aria-label="Permalink: ii. Extract the first matching with pattern."
+                                    href="#ii-extract-the-first-matching-with-pattern"><svg class="octicon octicon-link"
+                                        viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">"The price is $123.45 and the discount is $12.34 and round total is 111"</span><span class="pl-kos">;</span>
+<span class="pl-k">let</span> <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span></span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">match</span><span class="pl-kos">(</span><span class="pl-s1">pattern</span><span class="pl-kos">)</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let str = &quot;The price is $123.45 and the discount is $12.34 and round total is 111&quot;;
+let pattern = /(\d+(\.\d+)?)/
+
+console.log(str.match(pattern)[0]);" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">iii. Extract all matching with
+                                    pattern - Approach 1.</h3><a
+                                    id="iii-extract-all-matching-with-pattern---approach-1" class="anchor"
+                                    aria-label="Permalink: iii. Extract all matching with pattern - Approach 1."
+                                    href="#iii-extract-all-matching-with-pattern---approach-1"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">"The price is $123.45 and the discount is $12.34 and round total is 111"</span><span class="pl-kos">;</span>
+<span class="pl-k">let</span> <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span>g</span>
+
+<span class="pl-k">while</span> <span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">value</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span><span class="pl-kos">.</span><span class="pl-en">exec</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">)</span><span class="pl-kos">)</span> <span class="pl-c1">!=</span> <span class="pl-c1">null</span><span class="pl-kos">)</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">value</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let str = &quot;The price is $123.45 and the discount is $12.34 and round total is 111&quot;;
+let pattern = /(\d+(\.\d+)?)/g
+
+while ((value = pattern.exec(str)) != null)
+    console.log(value[0]);" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">iv. Extract all matching with
+                                    pattern - Approach 2.</h3><a
+                                    id="iv-extract-all-matching-with-pattern---approach-2" class="anchor"
+                                    aria-label="Permalink: iv. Extract all matching with pattern - Approach 2."
+                                    href="#iv-extract-all-matching-with-pattern---approach-2"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">"The price is $123.45 and the discount is $12.34 and round total is 111"</span><span class="pl-kos">;</span>
+<span class="pl-k">let</span> <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span>g</span>
+
+<span class="pl-k">let</span> <span class="pl-s1">allMatched</span> <span class="pl-c1">=</span> <span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">matchAll</span><span class="pl-kos">(</span><span class="pl-s1">pattern</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">match</span> <span class="pl-k">of</span> <span class="pl-s1">allMatched</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">match</span><span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let str = &quot;The price is $123.45 and the discount is $12.34 and round total is 111&quot;;
+let pattern = /(\d+(\.\d+)?)/g
+
+let allMatched = str.matchAll(pattern);
+
+for (let match of allMatched) {
+    console.log(match[1]);
+}" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">v. Conclusion. ⭐⭐⭐</h3><a
+                                    id="v-conclusion-" class="anchor"
+                                    aria-label="Permalink: v. Conclusion. ⭐⭐⭐" href="#v-conclusion-"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">"The price is $123.45 and the discount is $12.34 and round total is 111"</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span></span><span class="pl-kos">.</span><span class="pl-en">test</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span>             <span class="pl-c">// true</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">match</span><span class="pl-kos">(</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span></span> <span class="pl-kos">)</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>       <span class="pl-c">// 123.45</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">match</span><span class="pl-kos">(</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span>g</span> <span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span>         <span class="pl-c">// [ '123.45', '12.34', '111' ]</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">matchAll</span><span class="pl-kos">(</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span>g</span> <span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span>      <span class="pl-c">// Object [RegExp String Iterator] {}</span>
+<span class="pl-c">// for (i of str.matchAll(pattern))</span>
+<span class="pl-c">//     console.log(i[0]);</span>
+
+<span class="pl-k">let</span> <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-cce">\.</span><span class="pl-cce">\d</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-kos">)</span><span class="pl-c1">/</span>g</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">pattern</span><span class="pl-kos">.</span><span class="pl-en">exec</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">)</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>                  <span class="pl-c">// 123.45</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">pattern</span><span class="pl-kos">.</span><span class="pl-en">exec</span><span class="pl-kos">(</span><span class="pl-s1">str</span><span class="pl-kos">)</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>                  <span class="pl-c">// 12.34</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let str = &quot;The price is $123.45 and the discount is $12.34 and round total is 111&quot;;
+
+console.log(/(\d+(\.\d+)?)/.test(str));             // true
+
+console.log(str.match( /(\d+(\.\d+)?)/ )[0]);       // 123.45
+console.log(str.match( /(\d+(\.\d+)?)/g ));         // [ '123.45', '12.34', '111' ]
+
+console.log(str.matchAll( /(\d+(\.\d+)?)/g ));      // Object [RegExp String Iterator] {}
+// for (i of str.matchAll(pattern))
+//     console.log(i[0]);
+
+let pattern = /(\d+(\.\d+)?)/g
+console.log(pattern.exec(str)[0]);                  // 123.45
+console.log(pattern.exec(str)[0]);                  // 12.34
+" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">3. Callback methods. ⭐⭐⭐</h2><a
+                                    id="3-callback-methods-" class="anchor"
+                                    aria-label="Permalink: 3. Callback methods. ⭐⭐⭐" href="#3-callback-methods-"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">names</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'Sudha'</span><span class="pl-kos">,</span> <span class="pl-s">'Nagraj'</span><span class="pl-kos">,</span> <span class="pl-s">'Chethan'</span><span class="pl-kos">]</span><span class="pl-kos">;</span>
+
+<span class="pl-k">function</span> <span class="pl-en">myForEach</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">,</span> <span class="pl-s1">callBack</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span><span class="pl-c1">=</span><span class="pl-c1">0</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">&lt;</span><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-c1">length</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+        <span class="pl-s1">callBack</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-en">myForEach</span><span class="pl-kos">(</span><span class="pl-s1">names</span><span class="pl-kos">,</span> <span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let names = ['Sudha', 'Nagraj', 'Chethan'];
+
+function myForEach(arr, callBack) {
+    for (let i=0; i<arr.length; i++) {
+        callBack(arr[i]);
+    }
+}
+
+myForEach(names, (name) => {
+    console.log(name);
+})" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">4. Promises. ⭐⭐⭐</h2><a
+                                    id="4-promises-" class="anchor"
+                                    aria-label="Permalink: 4. Promises. ⭐⭐⭐" href="#4-promises-"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">myPromise</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Promise</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">resolve</span><span class="pl-kos">,</span> <span class="pl-s1">reject</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+
+    <span class="pl-en">setTimeout</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+        <span class="pl-k">let</span> <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-c1">true</span><span class="pl-kos">;</span>
+
+        <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">response</span><span class="pl-kos">)</span>
+            <span class="pl-s1">resolve</span><span class="pl-kos">(</span><span class="pl-s">"Successful!"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+        <span class="pl-k">else</span>
+            <span class="pl-s1">reject</span><span class="pl-kos">(</span><span class="pl-s">"Failed."</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+    <span class="pl-kos">}</span><span class="pl-kos">,</span> <span class="pl-c1">3000</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let myPromise = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+        let response = true;
+
+        if (!response)
+            resolve(&quot;Successful!&quot;);
+        else
+            reject(&quot;Failed.&quot;);
+    }, 3000);
+
+})" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-s1">myPromise</span>
+    <span class="pl-kos">.</span><span class="pl-en">then</span><span class="pl-kos">(</span><span class="pl-s1">result</span> <span class="pl-c1">=&gt;</span> <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">)</span><span class="pl-kos">)</span>
+    <span class="pl-kos">.</span><span class="pl-en">catch</span><span class="pl-kos">(</span><span class="pl-s1">err</span> <span class="pl-c1">=&gt;</span> <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">err</span><span class="pl-kos">)</span><span class="pl-kos">)</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="myPromise
+    .then(result => console.log(result))
+    .catch(err => console.log(err))" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">5. async &amp; await. ⭐⭐⭐</h2><a
+                                    id="5-async--await-" class="anchor"
+                                    aria-label="Permalink: 5. async &amp; await. ⭐⭐⭐" href="#5-async--await-"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">let</span> <span class="pl-s1">myPromise</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Promise</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">resolve</span><span class="pl-kos">,</span> <span class="pl-s1">reject</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+
+    <span class="pl-en">setTimeout</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+        <span class="pl-k">let</span> <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-c1">true</span><span class="pl-kos">;</span>
+
+        <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">response</span><span class="pl-kos">)</span>
+            <span class="pl-s1">resolve</span><span class="pl-kos">(</span><span class="pl-s">"Successful!"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+        <span class="pl-k">else</span>
+            <span class="pl-s1">reject</span><span class="pl-kos">(</span><span class="pl-s">"Failed."</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+    <span class="pl-kos">}</span><span class="pl-kos">,</span> <span class="pl-c1">3000</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="let myPromise = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+        let response = true;
+
+        if (response)
+            resolve(&quot;Successful!&quot;);
+        else
+            reject(&quot;Failed.&quot;);
+    }, 3000);
+
+})" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">async</span> <span class="pl-k">function</span> <span class="pl-en">handlePromise</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-k">try</span> <span class="pl-kos">{</span>
+        <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-k">await</span> <span class="pl-s1">myPromise</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+    <span class="pl-kos">}</span> <span class="pl-k">catch</span><span class="pl-kos">(</span><span class="pl-s1">err</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+        <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">err</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span><span class="pl-kos">;</span>
+
+<span class="pl-en">handlePromise</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="async function handlePromise() {
+    try {
+        console.log(await myPromise);
+    } catch(err) {
+        console.log(err);
+    }
+};
+
+handlePromise();" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h2 tabindex="-1" class="heading-element" dir="auto">6. Read TestData files.</h2><a
+                                    id="6-read-testdata-files" class="anchor"
+                                    aria-label="Permalink: 6. Read TestData files." href="#6-read-testdata-files"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">i. TestData.js file</h3><a
+                                    id="i-testdatajs-file" class="anchor"
+                                    aria-label="Permalink: i. TestData.js file" href="#i-testdatajs-file"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-smi">module</span><span class="pl-kos">.</span><span class="pl-c1">exports</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">"Sachin"</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">27</span>
+<span class="pl-kos">}</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="module.exports = {
+    name: &quot;Sachin&quot;,
+    age: 27
+}" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">const</span> <span class="pl-s1">testData</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'./TestData.js'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">testData</span><span class="pl-kos">.</span><span class="pl-c1">name</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="const testData = require('./TestData.js');
+
+console.log(testData.name);" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">ii. TestData.json file</h3><a
+                                    id="ii-testdatajson-file" class="anchor"
+                                    aria-label="Permalink: ii. TestData.json file" href="#ii-testdatajson-file"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-json notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre>{
+    <span class="pl-ent">"name"</span>: <span class="pl-s"><span class="pl-pds">"</span>Sachin<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"age"</span>: <span class="pl-c1">27</span>
+}</pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="{
+    &quot;name&quot;: &quot;Sachin&quot;,
+    &quot;age&quot;: 27
+}" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">const</span> <span class="pl-s1">testData</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'./TestData.json'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">testData</span><span class="pl-kos">.</span><span class="pl-c1">age</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="const testData = require('./TestData.json');
+
+console.log(testData.age);" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">iii. TestData.ini file</h3><a
+                                    id="iii-testdataini-file" class="anchor"
+                                    aria-label="Permalink: iii. TestData.ini file" href="#iii-testdataini-file"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-ini notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-en">[details]</span>
+<span class="pl-k">name</span>=Sachin
+<span class="pl-k">age</span>=27
+
+<span class="pl-en">[address]</span>
+<span class="pl-k">place</span>=Bengaluru</pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="[details]
+name=Sachin
+age=27
+
+[address]
+place=Bengaluru" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">const</span> <span class="pl-s1">fs</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'fs'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">const</span> <span class="pl-s1">ini</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'ini'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">config</span> <span class="pl-c1">=</span> <span class="pl-s1">ini</span><span class="pl-kos">.</span><span class="pl-en">parse</span><span class="pl-kos">(</span><span class="pl-s1">fs</span><span class="pl-kos">.</span><span class="pl-en">readFileSync</span><span class="pl-kos">(</span><span class="pl-s">'TestData.ini'</span><span class="pl-kos">,</span> <span class="pl-s">'utf-8'</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">config</span><span class="pl-kos">.</span><span class="pl-c1">details</span><span class="pl-kos">.</span><span class="pl-c1">name</span><span class="pl-kos">,</span> <span class="pl-s1">config</span><span class="pl-kos">.</span><span class="pl-c1">details</span><span class="pl-kos">.</span><span class="pl-c1">age</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="const fs = require('fs');
+const ini = require('ini');
+
+const config = ini.parse(fs.readFileSync('TestData.ini', 'utf-8'));
+
+console.log(config.details.name, config.details.age);" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">iv. TestData.yaml file</h3><a
+                                    id="iv-testdatayaml-file" class="anchor"
+                                    aria-label="Permalink: iv. TestData.yaml file" href="#iv-testdatayaml-file"><svg
+                                        class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-yaml notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-ent">person</span>:
+  <span class="pl-ent">name</span>: <span class="pl-s">John Doe</span>
+  <span class="pl-ent">age</span>: <span class="pl-c1">30</span>
+  <span class="pl-ent">address</span>:
+    <span class="pl-ent">street</span>: <span class="pl-s">123 Main St</span>
+    <span class="pl-ent">city</span>: <span class="pl-s">Anytown</span>
+    <span class="pl-ent">postal_code</span>: <span class="pl-c1">12345</span>
+  <span class="pl-ent">hobbies</span>:
+    - <span class="pl-s">Reading</span>
+    - <span class="pl-s">Hiking</span>
+    - <span class="pl-s">Coding</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="person:
+  name: John Doe
+  age: 30
+  address:
+    street: 123 Main St
+    city: Anytown
+    postal_code: 12345
+  hobbies:
+    - Reading
+    - Hiking
+    - Coding" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-k">const</span> <span class="pl-s1">fs</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'fs'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">const</span> <span class="pl-s1">yaml</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'js-yaml'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">config</span> <span class="pl-c1">=</span> <span class="pl-s1">yaml</span><span class="pl-kos">.</span><span class="pl-en">load</span><span class="pl-kos">(</span><span class="pl-s1">fs</span><span class="pl-kos">.</span><span class="pl-en">readFileSync</span><span class="pl-kos">(</span><span class="pl-s">'TestData.yaml'</span><span class="pl-kos">,</span> <span class="pl-s">'utf-8'</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">config</span><span class="pl-kos">.</span><span class="pl-c1">person</span><span class="pl-kos">.</span><span class="pl-c1">address</span><span class="pl-kos">.</span><span class="pl-c1">city</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">config</span><span class="pl-kos">.</span><span class="pl-c1">person</span><span class="pl-kos">.</span><span class="pl-c1">hobbies</span><span class="pl-kos">[</span><span class="pl-c1">2</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="const fs = require('fs');
+const yaml = require('js-yaml');
+
+const config = yaml.load(fs.readFileSync('TestData.yaml', 'utf-8'));
+
+console.log(config.person.address.city);
+console.log(config.person.hobbies[2]);" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="markdown-heading" dir="auto">
+                                <h3 tabindex="-1" class="heading-element" dir="auto">v. .env file</h3><a
+                                    id="v-env-file" class="anchor" aria-label="Permalink: v. .env file"
+                                    href="#v-env-file"><svg class="octicon octicon-link" viewBox="0 0 16 16"
+                                        version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path
+                                            d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <div class="highlight highlight-source-dotenv notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-v">PORT</span><span class="pl-k">=</span><span class="pl-s">3306</span>
+<span class="pl-v">DB_URL</span><span class="pl-k">=</span><span class="pl-s">mysql://localhost:3306/mydatabase</span>
+<span class="pl-v">API_KEY</span><span class="pl-k">=</span><span class="pl-s">your_api_key</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="PORT=3306
+DB_URL=mysql://localhost:3306/mydatabase
+API_KEY=your_api_key" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto"
+                                dir="auto">
+                                <pre><span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'dotenv'</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span class="pl-en">config</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">process</span><span class="pl-kos">.</span><span class="pl-c1">env</span><span class="pl-kos">.</span><span class="pl-c1">PORT</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+                                <div class="zeroclipboard-container">
+                                    <clipboard-copy aria-label="Copy"
+                                        class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+                                        data-copy-feedback="Copied!" data-tooltip-direction="w" value="require('dotenv').config();
+
+console.log(process.env.PORT);" tabindex="0" role="button">
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-copy js-clipboard-copy-icon">
+                                            <path
+                                                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                            </path>
+                                            <path
+                                                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                            data-view-component="true"
+                                            class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                                            <path
+                                                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                            </path>
+                                        </svg>
+                                    </clipboard-copy>
+                                </div>
+                            </div>
+                        </article>
+                    </div><button hidden="" data-hotkey="Control+a"></button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" style="display: none;">
+        <div id="__primerPortalRoot__" style="position: absolute; top: 0px; left: 0px;">
+            <div style="position: relative; z-index: 1;"><span role="tooltip" aria-label="Copy path"
+                    data-visible-text="Copy path" aria-hidden="true" id=":R1td9lab:"
+                    class="ControlledTooltip__TooltipBase-sc-6c5da61c-0 cKyHIo tooltipped-nw"
+                    style="position: absolute; left: 240.958px; top: 160px;"></span></div>
+            <div style="position: relative; z-index: 1;">
+                <div data-position-narrow="center" data-position-regular="center"
+                    class="Dialog__Backdrop-sc-uaxjsn-0 iQdLGg">
+                    <div width="xlarge" height="auto" role="dialog" aria-labelledby=":rsg:" aria-describedby=":rsh:"
+                        aria-modal="true" data-position-narrow="center" data-position-regular="center"
+                        class="Dialog__StyledDialog-sc-uaxjsn-1 iXYcHE" data-focus-trap="active"><span class="sentinel"
+                            tabindex="0" aria-hidden="true"></span>
+                        <div class="Box-sc-g0xbh4-0 hdShgm DialogOverflowWrapper" aria-labelledby=":rsg:" role="region"
+                            tabindex="0">
+                            <section aria-labelledby="outline-id" class="Box-sc-g0xbh4-0 eIrrGP">
+                                <div class="d-flex flex-justify-between flex-items-center underl">
+                                    <h3 id="outline-id"
+                                        class="d-flex flex-justify-between flex-items-center f5 text-bold px-2"
+                                        tabindex="-1">Contents
+                                    </h3>
+                                    <button id="closeBtn" data-component="IconButton" type="button"
+                                        aria-label="Close outline"
+                                        class="types__StyledButton-sc-ws60qy-0 lfnAPo fgColor-muted prc-Button-IconButton-szpyj"
+                                        data-loading="false" data-no-visuals="true" data-size="medium"
+                                        aria-describedby=":rsi:-loading-announcement"><svg aria-hidden="true"
+                                            focusable="false" class="octicon octicon-x" viewBox="0 0 16 16" width="16"
+                                            height="16" fill="currentColor"
+                                            style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;">
+                                            <path
+                                                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <nav class="NavList__NavBox-sc-1c8ygf7-0 exoaus">
+                                    <ul class="List__ListBox-sc-1x7olzq-0 gAwGiF">
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":ro7:--label  " id=":ro7:" href="#javascript-notes"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":ro7:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 kHuKdh">JavaScript Notes.</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":ro8:--label  " id=":ro8:" href="#1-for-loops-in-js"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":ro8:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 pZWmZ">1. For loops in js</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":ro9:--label  " id=":ro9:" href="#i-fori"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":ro9:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">i. for...i</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roa:--label  " id=":roa:"
+                                                href="#ii-forof-of-will-return-values-one-by-one"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roa:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">ii. for...of (of will return
+                                                            values one by one)</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rob:--label  " id=":rob:"
+                                                href="#iii-forin-in-will-return-keys-or-index-numbers-one-by-one"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rob:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">iii. for...in (in will
+                                                            return keys or index numbers one by one)</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roc:--label  " id=":roc:" href="#2-regex"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roc:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 pZWmZ">2. Regex</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rod:--label  " id=":rod:"
+                                                href="#i-check-whether-it-contains-somthing-with-pattern"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rod:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">i. Check whether it contains
+                                                            somthing with pattern</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roe:--label  " id=":roe:"
+                                                href="#ii-extract-the-first-matching-with-pattern"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roe:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">ii. Extract the first
+                                                            matching with pattern.</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rof:--label  " id=":rof:"
+                                                href="#iii-extract-all-matching-with-pattern---approach-1"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rof:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">iii. Extract all matching
+                                                            with pattern - Approach 1.</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rog:--label  " id=":rog:"
+                                                href="#iv-extract-all-matching-with-pattern---approach-2"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rog:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">iv. Extract all matching
+                                                            with pattern - Approach 2.</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roh:--label  " id=":roh:" href="#v-conclusion-"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roh:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">v. Conclusion. ⭐⭐⭐</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roi:--label  " id=":roi:" href="#3-callback-methods-"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roi:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 pZWmZ">3. Callback methods. ⭐⭐⭐
+                                                        </div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roj:--label  " id=":roj:" href="#4-promises-"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roj:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 pZWmZ">4. Promises. ⭐⭐⭐</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rok:--label  " id=":rok:" href="#5-async--await-"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rok:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 pZWmZ">5. async &amp; await. ⭐⭐⭐
+                                                        </div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rol:--label  " id=":rol:"
+                                                href="#6-read-testdata-files" style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rol:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 pZWmZ">6. Read TestData files.</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rom:--label  " id=":rom:" href="#i-testdatajs-file"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rom:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">i. TestData.js file</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":ron:--label  " id=":ron:" href="#ii-testdatajson-file"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":ron:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">ii. TestData.json file</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roo:--label  " id=":roo:" href="#iii-testdataini-file"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roo:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">iii. TestData.ini file</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":rop:--label  " id=":rop:" href="#iv-testdatayaml-file"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":rop:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">iv. TestData.yaml file</div>
+                                                    </span></div>
+                                            </a></li>
+                                        <li class="Item__LiBox-sc-yeql7o-0 hViPfw"><a
+                                                class="Link__StyledLink-sc-14289xe-0 kMTghr" tabindex="0"
+                                                aria-labelledby=":roq:--label  " id=":roq:" href="#v-env-file"
+                                                style="--subitem-depth: 0;">
+                                                <div data-component="ActionList.Item--DividerContainer"
+                                                    class="Box-sc-g0xbh4-0 fFwzwX"><span id=":roq:--label"
+                                                        class="Box-sc-g0xbh4-0 jtiCfm">
+                                                        <div class="Box-sc-g0xbh4-0 fEKbCL">v. .env file</div>
+                                                    </span></div>
+                                            </a></li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </div><span class="sentinel" tabindex="0" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="res/scripts/script.js"></script>
+</body>
+
+</html>

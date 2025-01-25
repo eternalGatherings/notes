@@ -49,3 +49,9 @@
 .underl {
   border-bottom: 1px solid var(--borderColor-default, var(--color-border-default));
 }
+
+.notes-icons {
+  margin-left: 10px;
+  height: 16px;
+  font-size: 16px;
+}
