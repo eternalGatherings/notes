@@ -1911,7 +1911,7 @@
 
 .cPyzTc:hover { color: var(--fgColor-default,var(--color-fg-default,#adbac7)); text-decoration: underline; }
 
-.kMTghr { text-decoration: none; padding: 6px 8px; display: flex; -webkit-box-flex: 1; flex-grow: 1; border-radius: 6px; color: inherit; }
+.kMTghr, .gKcxqA { text-decoration: none; padding: 6px 8px; display: flex; -webkit-box-flex: 1; flex-grow: 1; border-radius: 6px; color: inherit; }
 
 [data-a11y-link-underlines="true"] .Link__StyledLink-sc-14289xe-0[data-inline="true"] { text-decoration: underline; }
 
