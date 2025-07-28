@@ -60,14 +60,14 @@
         booleanParam(<span class="pl-c1">name</span>: <span class="pl-s"><span class="pl-pds">'</span>Debug<span class="pl-pds">'</span></span>, <span class="pl-c1">defaultValue</span>: <span class="pl-c1">false</span>)
     }
     stages {
-        stage(<span class="pl-s"><span class="pl-pds">'</span>demo-stage<span class="pl-pds">'</span></span>) {
+        stage(<span class="pl-s"><span class="pl-pds">'</span>Checkout Code<span class="pl-pds">'</span></span>) {
             steps {
-                echo <span class="pl-s"><span class="pl-pds">"</span>Name: <span class="pl-s1"><span class="pl-pse">${</span>envName<span class="pl-pse">}</span></span><span class="pl-pds">"</span></span>
+                git <span class="pl-c1">branch</span>: <span class="pl-s"><span class="pl-pds">'</span>master<span class="pl-pds">'</span></span>, <span class="pl-c1">url</span>: <span class="pl-s"><span class="pl-pds">'</span>https://github.com/your-org/your-repo.git<span class="pl-pds">'</span></span>
             }
         }
         stage(<span class="pl-s"><span class="pl-pds">'</span>build<span class="pl-pds">'</span></span>) {
             steps {
-                echo <span class="pl-s"><span class="pl-pds">'</span>Building project...<span class="pl-pds">'</span></span>
+                echo <span class="pl-s"><span class="pl-pds">'</span>Installing node modules<span class="pl-pds">'</span></span>
                 bat <span class="pl-s"><span class="pl-pds">'</span>npm install<span class="pl-pds">'</span></span>
             }
         }
