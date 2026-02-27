@@ -13,24 +13,28 @@
       
       
       
+        <link rel="prev" href="../manual_testing/">
+      
+      
+        <link rel="next" href="../solved_problems/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.ico">
+      <link rel="icon" href="../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
-        <title>Notes by Sachin Kn</title>
+        <title>3. Jenkins Pipeline Demo - Notes by Sachin Kn</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#jenkinsfile-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Notes by Sachin Kn" class="md-header__button md-logo" aria-label="Notes by Sachin Kn" data-md-component="logo">
+    <a href="../.." title="Notes by Sachin Kn" class="md-header__button md-logo" aria-label="Notes by Sachin Kn" data-md-component="logo">
       
-  <img src="/assets/images/sachi.png" alt="logo">
+  <img src="../../assets/images/sachi.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              3. Jenkins Pipeline Demo
             
           </span>
         </div>
@@ -220,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -239,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -256,11 +265,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/Notes/git_commands/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../git_commands/" class="md-tabs__link">
           
   
   
@@ -296,9 +307,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Notes by Sachin Kn" class="md-nav__button md-logo" aria-label="Notes by Sachin Kn" data-md-component="logo">
+    <a href="../.." title="Notes by Sachin Kn" class="md-nav__button md-logo" aria-label="Notes by Sachin Kn" data-md-component="logo">
       
-  <img src="/assets/images/sachi.png" alt="logo">
+  <img src="../../assets/images/sachi.png" alt="logo">
 
     </a>
     Notes by Sachin Kn
@@ -325,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -352,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -376,8 +387,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -401,17 +414,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -429,7 +445,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -447,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/git_commands/" class="md-nav__link">
+      <a href="../git_commands/" class="md-nav__link">
         
   
   
@@ -475,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/manual_testing/" class="md-nav__link">
+      <a href="../manual_testing/" class="md-nav__link">
         
   
   
@@ -500,10 +516,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Notes/jenkins/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Jenkins Pipeline Demo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -519,6 +562,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jenkinsfile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samplegroovy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sample.groovy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -562,7 +647,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/Notes/solved_problems/" class="md-nav__link ">
+            <a href="../solved_problems/" class="md-nav__link ">
               
   
   
@@ -606,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/solved_problems/1.PatternPrinting/" class="md-nav__link">
+      <a href="../solved_problems/1.PatternPrinting/" class="md-nav__link">
         
   
   
@@ -634,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/solved_problems/2.StringProblems/" class="md-nav__link">
+      <a href="../solved_problems/2.StringProblems/" class="md-nav__link">
         
   
   
@@ -662,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/solved_problems/3.NumbersProblems/" class="md-nav__link">
+      <a href="../solved_problems/3.NumbersProblems/" class="md-nav__link">
         
   
   
@@ -690,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/solved_problems/4.ArrayProblems/" class="md-nav__link">
+      <a href="../solved_problems/4.ArrayProblems/" class="md-nav__link">
         
   
   
@@ -718,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/solved_problems/5.SortingAlgorithms/" class="md-nav__link">
+      <a href="../solved_problems/5.SortingAlgorithms/" class="md-nav__link">
         
   
   
@@ -754,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/playwright/" class="md-nav__link">
+      <a href="../playwright/" class="md-nav__link">
         
   
   
@@ -782,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/restassured/" class="md-nav__link">
+      <a href="../restassured/" class="md-nav__link">
         
   
   
@@ -810,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/sql/" class="md-nav__link">
+      <a href="../sql/" class="md-nav__link">
         
   
   
@@ -838,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Notes/java/" class="md-nav__link">
+      <a href="../java/" class="md-nav__link">
         
   
   
@@ -883,6 +968,38 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jenkinsfile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samplegroovy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sample.groovy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -895,8 +1012,115 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="jenkinsfile-configuration">Jenkinsfile Configuration.<a class="headerlink" href="#jenkinsfile-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="jenkinsfile">Jenkinsfile<a class="headerlink" href="#jenkinsfile" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sachi&#39;</span>
+<span class="w">        </span><span class="n">SERVER_CREDENTIALS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">credentials</span><span class="o">(</span><span class="s1">&#39;server-cred&#39;</span><span class="o">)</span><span class="w"> </span><span class="c1">// Plugin needed: Credential Binding</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">parameters</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">string</span><span class="o">(</span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;Name&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">defaultValue:</span><span class="w"> </span><span class="s2">&quot;Sachin&quot;</span><span class="o">)</span>
+<span class="w">        </span><span class="n">choice</span><span class="o">(</span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;Browser&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">choices:</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;chromium&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;firefox&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;webkit&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;MicrosoftEdge&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;GoogleChrome&#39;</span><span class="o">])</span>
+<span class="w">        </span><span class="n">choice</span><span class="o">(</span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;Scripts&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">choices:</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;ID-01&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;ID-02&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;ID-03&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;@regression&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;@sanity&#39;</span><span class="o">])</span>
+<span class="w">        </span><span class="n">booleanParam</span><span class="o">(</span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;Headed&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">defaultValue:</span><span class="w"> </span><span class="kc">true</span><span class="o">)</span>
+<span class="w">        </span><span class="n">booleanParam</span><span class="o">(</span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;Debug&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">defaultValue:</span><span class="w"> </span><span class="kc">false</span><span class="o">)</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Check&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;env.BRANCH_NAME: ${env.BRANCH_NAME}&quot;</span>
+<span class="w">                </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;Name: ${Name}&quot;</span>
+<span class="w">                </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;SERVER_CREDENTIALS: ${SERVER_CREDENTIALS}&quot;</span>
+
+<span class="w">                </span><span class="c1">// withCredentials([usernamePassword(credentials: &#39;server-cred&#39;, usernameVariable: USER, passwordVariable: PWD)]) {</span>
+<span class="w">                </span><span class="c1">//     sh &quot;USER: ${USER}&quot;</span>
+<span class="w">                </span><span class="c1">//     sh &quot;PWD: ${PWD}&quot;</span>
+<span class="w">                </span><span class="c1">// }</span>
+
+<span class="w">                </span><span class="n">script</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                    </span><span class="n">gv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">load</span><span class="w"> </span><span class="s1">&#39;sample.groovy&#39;</span>
+<span class="w">                    </span><span class="n">gv</span><span class="o">.</span><span class="na">test</span><span class="o">();</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Checkout Code&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="n">git</span><span class="w"> </span><span class="nl">branch:</span><span class="w"> </span><span class="s1">&#39;master&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">url:</span><span class="w"> </span><span class="s1">&#39;https://github.com/your-org/your-repo.git&#39;</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="c1">// This will work only for Multi Branch Pipeline</span>
+<span class="w">            </span><span class="c1">// when {</span>
+<span class="w">            </span><span class="c1">//     expression {</span>
+<span class="w">            </span><span class="c1">//         env.BRANCH_NAME == &quot;master&quot; || env.BRANCH_NAME == &quot;main&quot;</span>
+<span class="w">            </span><span class="c1">//     }</span>
+<span class="w">            </span><span class="c1">// }</span>
+<span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Building project&#39;</span>
+<span class="w">                </span><span class="n">bat</span><span class="w"> </span><span class="s1">&#39;echo Name: %Name%&#39;</span>
+<span class="w">                </span><span class="n">bat</span><span class="w"> </span><span class="s1">&#39;npm install&#39;</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;tests&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="c1">// This will work only for Multi Branch Pipeline</span>
+<span class="w">            </span><span class="c1">// when {</span>
+<span class="w">            </span><span class="c1">//     expression {</span>
+<span class="w">            </span><span class="c1">//         env.BRANCH_NAME == &quot;master&quot; || env.BRANCH_NAME == &quot;main&quot;</span>
+<span class="w">            </span><span class="c1">//     }</span>
+<span class="w">            </span><span class="c1">// }</span>
+<span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Running tests&#39;</span>
+<span class="w">                </span><span class="n">script</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                    </span><span class="kt">def</span><span class="w"> </span><span class="n">headedFlag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">Headed</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;--headed&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">                    </span><span class="kt">def</span><span class="w"> </span><span class="n">debugFlag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">Debug</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;--debug&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">                    </span><span class="n">bat</span><span class="w"> </span><span class="s2">&quot;npx playwright test --project=%Browser% ${headedFlag} --grep %Scripts% ${debugFlag}&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">}</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">post</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">success</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Job Success&#39;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">failure</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Job Failure&#39;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">always</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Job Finished&#39;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="samplegroovy">sample.groovy<a class="headerlink" href="#samplegroovy" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">def</span><span class="w"> </span><span class="nf">test</span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;Hi my name is ${Name} from groovy.&quot;</span>
+<span class="o">}</span>
+
+<span class="k">return</span><span class="w"> </span><span class="k">this</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -983,10 +1207,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
