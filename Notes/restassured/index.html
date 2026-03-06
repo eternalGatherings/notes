@@ -1220,29 +1220,29 @@
 <h1 id="restassured">RestAssured<a class="headerlink" href="#restassured" title="Permanent link">&para;</a></h1>
 <h2 id="0-some-important-codes">0. Some important codes.<a class="headerlink" href="#0-some-important-codes" title="Permanent link">&para;</a></h2>
 <p><strong>Convertions</strong>
-<div class="highlight"><pre><span></span><code><span class="n">from</span><span class="w"> </span><span class="n">JsonString</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Pojo</span><span class="w">     </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">ResRoot</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gson</span><span class="p">().</span><span class="na">fromJson</span><span class="p">(</span><span class="n">myString</span><span class="p">,</span><span class="w"> </span><span class="n">ResRoot</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">from</span><span class="w"> </span><span class="n">JsonString</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Pojo</span><span class="w">     </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">ResRoot</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gson</span><span class="p">().</span><span class="na">fromJson</span><span class="p">(</span><span class="n">myString</span><span class="p">,</span><span class="w"> </span><span class="n">ResRoot</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
 <span class="n">from</span><span class="w"> </span><span class="n">Pojo</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">JsonString</span><span class="w">     </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gson</span><span class="p">().</span><span class="na">toJson</span><span class="p">(</span><span class="n">myPojo</span><span class="p">);</span>
 <span class="n">from</span><span class="w"> </span><span class="n">JsonString</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">JsonPath</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">JsonPath</span><span class="w"> </span><span class="n">jsonPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonPath</span><span class="p">(</span><span class="n">myStringValue</span><span class="p">);</span>
 <span class="n">from</span><span class="w"> </span><span class="n">Response</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Pojo</span><span class="w">       </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">myResRoot</span><span class="w"> </span><span class="n">details</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myResponse</span><span class="p">.</span><span class="na">as</span><span class="p">(</span><span class="n">myResRoot</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
 <span class="n">from</span><span class="w"> </span><span class="n">Response</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">jsonString</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">resString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myResponse</span><span class="p">.</span><span class="na">asString</span><span class="p">();</span>
 </code></pre></div></p>
 <p><strong>To print response</strong>
-<div class="highlight"><pre><span></span><code><span class="n">to</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">response</span><span class="w">         </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">myResponse</span><span class="p">.</span><span class="na">then</span><span class="p">().</span><span class="na">log</span><span class="p">().</span><span class="na">all</span><span class="p">();</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">to</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">response</span><span class="w">         </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">myResponse</span><span class="p">.</span><span class="na">then</span><span class="p">().</span><span class="na">log</span><span class="p">().</span><span class="na">all</span><span class="p">();</span>
 <span class="n">to</span><span class="w"> </span><span class="n">print</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">json</span><span class="w">          </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">myResponse</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
 <span class="n">to</span><span class="w"> </span><span class="n">prettyPrint</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">json</span><span class="w">    </span><span class="o">-&gt;</span><span class="w">  </span><span class="n">myResponse</span><span class="p">.</span><span class="na">prettyPrint</span><span class="p">();</span>
 </code></pre></div></p>
 <p><strong>Assertions</strong>
-<div class="highlight"><pre><span></span><code><span class="n">myResponse</span><span class="p">.</span><span class="na">then</span><span class="p">().</span><span class="na">assertThat</span><span class="p">().</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">myResponse</span><span class="p">.</span><span class="na">then</span><span class="p">().</span><span class="na">assertThat</span><span class="p">().</span>
 <span class="w">       </span><span class="n">statusCode</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span>
 <span class="w">       </span><span class="n">body</span><span class="p">(</span><span class="s">&quot;isSucceed&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="kc">true</span><span class="p">)).</span>
 <span class="w">       </span><span class="n">body</span><span class="p">(</span><span class="s">&quot;data.list[0].startDateTime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="s">&quot;01-Aug-2023&quot;</span><span class="p">)).</span>
 <span class="w">       </span><span class="n">header</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json; charset=utf-8&quot;</span><span class="p">);</span>
 </code></pre></div></p>
 <p><strong>To get the count of JsonList</strong>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonPath</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;data.list.size()&quot;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonPath</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;data.list.size()&quot;</span><span class="p">);</span>
 </code></pre></div></p>
 <h2 id="1-all-the-methods-of-rest-assured">1. All the methods of Rest Assured.<a class="headerlink" href="#1-all-the-methods-of-rest-assured" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">allTheMethods</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">allTheMethods</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="n">SessionFilter</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SessionFilter</span><span class="p">();</span>
 
@@ -1271,7 +1271,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="2-simple-get-request">2. Simple GET Request.<a class="headerlink" href="#2-simple-get-request" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">getResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RestAssured</span>
 <span class="w">            </span><span class="p">.</span><span class="na">given</span><span class="p">()</span>
@@ -1292,7 +1292,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="3-simple-post-request">3. Simple POST Request.<a class="headerlink" href="#3-simple-post-request" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">postRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">postRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">postResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RestAssured</span>
 <span class="w">            </span><span class="p">.</span><span class="na">given</span><span class="p">()</span>
@@ -1318,7 +1318,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="4-dynamic-path-parameter-request">4. Dynamic Path Parameter Request.<a class="headerlink" href="#4-dynamic-path-parameter-request" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">dynamicPathParameterRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">dynamicPathParameterRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">postResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RestAssured</span>
 <span class="w">            </span><span class="p">.</span><span class="na">given</span><span class="p">()</span>
@@ -1337,7 +1337,7 @@
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <h2 id="5-session-filter-example">5. Session Filter Example.<a class="headerlink" href="#5-session-filter-example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sessionFilterExample</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sessionFilterExample</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="n">SessionFilter</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SessionFilter</span><span class="p">();</span>
 
@@ -1373,7 +1373,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="6-json-path-exercise">6. Json Path Exercise.<a class="headerlink" href="#6-json-path-exercise" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jsonPathTest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<p><div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jsonPathTest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="n">JsonPath</span><span class="w"> </span><span class="n">jsonPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonPath</span><span class="p">(</span><span class="s">&quot;&quot;&quot;</span>
 <span class="s">            {</span>
@@ -1445,7 +1445,7 @@
 </code></pre></div></p>
 <h2 id="7-serialization">7. Serialization<a class="headerlink" href="#7-serialization" title="Permanent link">&para;</a></h2>
 <p><strong>Converts a Java object, such as a Plain Old Java Object (POJO), into a format like JSON</strong>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jsonSerialization</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jsonSerialization</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">Dashboard</span><span class="w"> </span><span class="n">dashboard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dashboard</span><span class="p">();</span>
 <span class="w">    </span><span class="n">dashboard</span><span class="p">.</span><span class="na">setWebsite</span><span class="p">(</span><span class="s">&quot;sachinkn.in&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">dashboard</span><span class="p">.</span><span class="na">setPurchaseAmount</span><span class="p">(</span><span class="mi">910</span><span class="p">);</span>
@@ -1480,7 +1480,7 @@
 </code></pre></div></p>
 <h2 id="7-deserialization">7. Deserialization<a class="headerlink" href="#7-deserialization" title="Permanent link">&para;</a></h2>
 <p><strong>The opposite of serialization, deserialization converts the serialized data back into a Java object.</strong>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jsonDeserialization</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jsonDeserialization</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">jsonString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;&quot;</span>
 <span class="s">        {</span>
@@ -1513,7 +1513,7 @@
 <span class="p">}</span>
 </code></pre></div></p>
 <h2 id="8-request-spec-builder">8. Request Spec Builder.<a class="headerlink" href="#8-request-spec-builder" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">RequestSpecBuilder</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">RequestSpecBuilder</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">SessionFilter</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SessionFilter</span><span class="p">();</span>
 
 <span class="w">    </span><span class="n">RequestSpecification</span><span class="w"> </span><span class="n">reqSpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RequestSpecBuilder</span><span class="p">()</span>
@@ -1541,7 +1541,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="8-response-spec-builder">8. Response Spec Builder.<a class="headerlink" href="#8-response-spec-builder" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ResponseSpecBuilder</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ResponseSpecBuilder</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">RequestSpecification</span><span class="w"> </span><span class="n">reqSpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RequestSpecBuilder</span><span class="p">()</span>
 <span class="w">            </span><span class="p">.</span><span class="na">setBaseUri</span><span class="p">(</span><span class="s">&quot;https://reqres.in&quot;</span><span class="p">)</span>
 <span class="w">            </span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="n">ContentType</span><span class="p">.</span><span class="na">JSON</span><span class="p">)</span>
@@ -1607,7 +1607,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2026 Sachin KN
+      &copy; 2026 <a href="https://sachinkn.in"  target="_blank" rel="noopener">Sachin Kn</a>
     </div>
   
   

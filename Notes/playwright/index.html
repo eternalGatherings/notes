@@ -2114,6 +2114,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#1-login-using-api-to-bypass-the-login-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Login using API to bypass the login page.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2-use-storagestate-using-api-to-bypass-the-login-page" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3651,6 +3662,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#1-login-using-api-to-bypass-the-login-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Login using API to bypass the login page.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2-use-storagestate-using-api-to-bypass-the-login-page" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3800,7 +3822,7 @@
 <h1 id="playwright-notes">Playwright Notes<a class="headerlink" href="#playwright-notes" title="Permanent link">&para;</a></h1>
 <h2 id="playwright-test-examples">Playwright Test Examples<a class="headerlink" href="#playwright-test-examples" title="Permanent link">&para;</a></h2>
 <h3 id="1-simple-test-in-playwright">1. Simple Test in Playwright<a class="headerlink" href="#1-simple-test-in-playwright" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chromium</span><span class="p">,</span><span class="w"> </span><span class="nx">firefox</span><span class="p">,</span><span class="w"> </span><span class="nx">webkit</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;playwright&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chromium</span><span class="p">,</span><span class="w"> </span><span class="nx">firefox</span><span class="p">,</span><span class="w"> </span><span class="nx">webkit</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;playwright&#39;</span><span class="p">);</span>
 
 <span class="c1">// Approach - 1</span>
 <span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">test_1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -3851,7 +3873,7 @@
 <span class="cm"> */</span>
 </code></pre></div>
 <h3 id="2-defining-playwright-test">2. Defining playwright test<a class="headerlink" href="#2-defining-playwright-test" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">,</span><span class="w"> </span><span class="nx">browserName</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">,</span><span class="w"> </span><span class="nx">browserName</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://www.google.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;browserName: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">browserName</span><span class="p">);</span>
@@ -3862,26 +3884,26 @@
 </code></pre></div>
 <h2 id="waits">Waits<a class="headerlink" href="#waits" title="Permanent link">&para;</a></h2>
 <h3 id="1-to-wait-for-element-to-be-present">1. To wait for element to be present<a class="headerlink" href="#1-to-wait-for-element-to-be-present" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="s1">&#39;[data-ody-id=&quot;AdvanceSearchLink&quot;]&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="s1">&#39;[data-ody-id=&quot;AdvanceSearchLink&quot;]&#39;</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="2-to-wait-for-element-to-be-visible">2. To wait for element to be visible<a class="headerlink" href="#2-to-wait-for-element-to-be-visible" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="s1">&#39;[data-ody-id=&quot;AdvanceSearchLink&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;visible&#39;</span><span class="p">});</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="s1">&#39;[data-ody-id=&quot;AdvanceSearchLink&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;visible&#39;</span><span class="p">});</span>
 </code></pre></div>
 <h3 id="3-waitfordocumenttogetready">3. waitForDocumentToGetReady()<a class="headerlink" href="#3-waitfordocumenttogetready" title="Permanent link">&para;</a></h3>
 <h4 id="selenium">Selenium<a class="headerlink" href="#selenium" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">waitForDocumentToGetReady</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">waitForDocumentToGetReady</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">WebDriverWait</span><span class="p">(</span><span class="n">webDriver</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">).</span><span class="na">until</span><span class="p">((</span><span class="n">ExpectedCondition</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="n">wd</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">((</span><span class="n">JavascriptExecutor</span><span class="p">)</span><span class="w"> </span><span class="n">wd</span><span class="p">)</span>
 <span class="w">        </span><span class="p">.</span><span class="na">executeScript</span><span class="p">(</span><span class="s">&quot;return document.readyState&quot;</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;complete&quot;</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
 <h4 id="playwright">Playwright<a class="headerlink" href="#playwright" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">waitForDocumentToGetReady</span><span class="p">(</span><span class="nx">page</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">waitForDocumentToGetReady</span><span class="p">(</span><span class="nx">page</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForLoadState</span><span class="p">(</span><span class="s1">&#39;networkidle&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">60000</span><span class="w"> </span><span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="4-waitforajaxtocomplete">4. waitForAjaxToComplete()<a class="headerlink" href="#4-waitforajaxtocomplete" title="Permanent link">&para;</a></h3>
 <h4 id="selenium_1">Selenium<a class="headerlink" href="#selenium_1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">waitForAjaxToComplete</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">waitForAjaxToComplete</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">waitForDocumentToGetReady</span><span class="p">();</span>
 <span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">WebDriverWait</span><span class="p">(</span><span class="n">webDriver</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">).</span><span class="na">until</span><span class="p">((</span><span class="n">ExpectedCondition</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">JavascriptExecutor</span><span class="w"> </span><span class="n">js</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">JavascriptExecutor</span><span class="p">)</span><span class="w"> </span><span class="n">driver</span><span class="p">;</span>
@@ -3895,7 +3917,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h4 id="playwright_1">Playwright<a class="headerlink" href="#playwright_1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">waitForAjaxToComplete</span><span class="p">(</span><span class="nx">page</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">waitForAjaxToComplete</span><span class="p">(</span><span class="nx">page</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForFunction</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">jQuery</span><span class="p">.</span><span class="nx">active</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
@@ -3908,7 +3930,7 @@
 </code></pre></div>
 <h2 id="increase-test-timeout">Increase Test Timeout<a class="headerlink" href="#increase-test-timeout" title="Permanent link">&para;</a></h2>
 <h3 id="1-approach-1">1. Approach 1<a class="headerlink" href="#1-approach-1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Increase Test Timeout - Approach 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Increase Test Timeout - Approach 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="c1">// Increaase test timeout - Approach 1</span>
 <span class="w">    </span><span class="nx">test</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="mf">60000</span><span class="p">);</span>
@@ -3917,7 +3939,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="2-approach-2">2. Approach 2<a class="headerlink" href="#2-approach-2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Increase Test Timeout - Approach 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Increase Test Timeout - Approach 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="c1">// Increaase test timeout - Approach 2</span>
 <span class="w">    </span><span class="nx">test</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">testInfo</span><span class="p">.</span><span class="nx">timeout</span><span class="o">+</span><span class="mf">10000</span><span class="p">);</span>
@@ -3927,7 +3949,7 @@
 </code></pre></div>
 <h2 id="handling-web-elements-click-here-for-more">Handling web elements. <a href="https://github.com/sachinknsachi/Playwright-tutorials/tree/master/sachin-tests/Practice/tests-2">Click here for more</a><a class="headerlink" href="#handling-web-elements-click-here-for-more" title="Permanent link">&para;</a></h2>
 <h3 id="1-handling-input-fields">1. Handling Input fields.<a class="headerlink" href="#1-handling-input-fields" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Text field&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Text field&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -3948,7 +3970,7 @@
 <h3 id="2-handling-click-actions">2. Handling Click actions.<a class="headerlink" href="#2-handling-click-actions" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="gi">+ Click method will just click on the element, but check will click if it is not selected.</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Click actions&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Click actions&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -3984,7 +4006,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="3-handling-dropdowns">3. Handling Dropdowns.<a class="headerlink" href="#3-handling-dropdowns" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Dropdowns&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Dropdowns&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
@@ -4025,7 +4047,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="4-handling-multi-select-dropdown">4. Handling Multi Select Dropdown.<a class="headerlink" href="#4-handling-multi-select-dropdown" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Multi Select Dropdown&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handling Multi Select Dropdown&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
@@ -4041,7 +4063,7 @@
 </code></pre></div>
 <h3 id="5-handling-dialogsalert-popups">5. Handling Dialogs/Alert popups.<a class="headerlink" href="#5-handling-dialogsalert-popups" title="Permanent link">&para;</a></h3>
 <h4 id="i-alert-with-ok">i. Alert with ok.<a class="headerlink" href="#i-alert-with-ok" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Alert with ok&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Alert with ok&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
@@ -4069,7 +4091,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-alert-with-confirmation">ii. Alert with confirmation.<a class="headerlink" href="#ii-alert-with-confirmation" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Alert with confirmation&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Alert with confirmation&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
@@ -4101,7 +4123,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="iii-alert-with-prompt">iii. Alert with prompt.<a class="headerlink" href="#iii-alert-with-prompt" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Alert with prompt&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Alert with prompt&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
@@ -4135,7 +4157,7 @@
 </code></pre></div>
 <h3 id="6-handling-frames">6. Handling Frames.<a class="headerlink" href="#6-handling-frames" title="Permanent link">&para;</a></h3>
 <h4 id="i-to-get-the-frames-count">i. To get the frames count.<a class="headerlink" href="#i-to-get-the-frames-count" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To get the frames count&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To get the frames count&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://ui.vision/demo/webtest/frames/&#39;</span><span class="p">);</span>
 
@@ -4146,7 +4168,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-to-interact-with-the-frame-using-url">ii. To interact with the frame using url.<a class="headerlink" href="#ii-to-interact-with-the-frame-using-url" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To interact with the frame using url&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To interact with the frame using url&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://ui.vision/demo/webtest/frames/&#39;</span><span class="p">);</span>
 
@@ -4160,7 +4182,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="iii-to-interact-with-the-frame-using-frame-locator">iii. To interact with the frame using frame locator.<a class="headerlink" href="#iii-to-interact-with-the-frame-using-frame-locator" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To interact with the frame using frame locator&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To interact with the frame using frame locator&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://ui.vision/demo/webtest/frames/&#39;</span><span class="p">);</span>
 
@@ -4174,7 +4196,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="iiii-to-interact-with-the-inner-frame">iiii. To interact with the inner frame.<a class="headerlink" href="#iiii-to-interact-with-the-inner-frame" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To interact with the inner frame&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;To interact with the inner frame&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://ui.vision/demo/webtest/frames/&#39;</span><span class="p">);</span>
 
@@ -4189,7 +4211,7 @@
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="7-elementsfilter-filtering-the-located-elements">7. Elements.filter() - filtering the located elements.<a class="headerlink" href="#7-elementsfilter-filtering-the-located-elements" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Elements.filter()&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Elements.filter()&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -4212,7 +4234,7 @@
 </code></pre></div>
 <h3 id="8-handling-web-table">8. Handling web table.<a class="headerlink" href="#8-handling-web-table" title="Permanent link">&para;</a></h3>
 <h4 id="i-printing-web-table-data">i. Printing web table data.<a class="headerlink" href="#i-printing-web-table-data" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Printing web table&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Printing web table&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -4238,7 +4260,7 @@ Master In Java          Amod        JAVA            2000
 Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h4 id="ii-printing-table-data-as">ii. Printing table data as [{},{}].<a class="headerlink" href="#ii-printing-table-data-as" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Printing table data as []{}&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Printing table data as []{}&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -4266,7 +4288,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h5 id="output_1">Output.<a class="headerlink" href="#output_1" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="p">[</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">BookName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Learn Selenium&#39;</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">Author</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Amit&#39;</span><span class="p">,</span>
@@ -4306,7 +4328,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">]</span>
 </code></pre></div>
 <h3 id="9-move-to-element-mouse-hover">9. Move to element / Mouse Hover.<a class="headerlink" href="#9-move-to-element-mouse-hover" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Move to element&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Move to element&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
@@ -4316,7 +4338,7 @@ Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h3 id="10-mouse-actions">10. Mouse Actions.<a class="headerlink" href="#10-mouse-actions" title="Permanent link">&para;</a></h3>
 <h4 id="i-right-click-action">i. Right click action.<a class="headerlink" href="#i-right-click-action" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Right click actions&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Right click actions&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// Approach-1</span>
@@ -4324,7 +4346,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-double-click-action">ii. Double click action.<a class="headerlink" href="#ii-double-click-action" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Double click actions&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Double click actions&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -4341,7 +4363,7 @@ Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h4 id="ii-drag-and-drop">ii. Drag and Drop.<a class="headerlink" href="#ii-drag-and-drop" title="Permanent link">&para;</a></h4>
 <h5 id="approach-1">Approach 1.<a class="headerlink" href="#approach-1" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Drag and Drop&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Drag and Drop&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -4354,7 +4376,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h5 id="approach-2">Approach 2.<a class="headerlink" href="#approach-2" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Drag and Drop&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Drag and Drop&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com/&#39;</span><span class="p">);</span>
 
@@ -4372,7 +4394,7 @@ Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h3 id="11-keyboard-actions">11. Keyboard Actions<a class="headerlink" href="#11-keyboard-actions" title="Permanent link">&para;</a></h3>
 <h4 id="i-copy-paste-text">i. Copy paste text.<a class="headerlink" href="#i-copy-paste-text" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Copy paste text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Copy paste text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#field1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;My name is Sachin.&#39;</span><span class="p">);</span>
@@ -4383,14 +4405,14 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-clear-and-type-approach-1">ii. clear and type - Approach 1.<a class="headerlink" href="#ii-clear-and-type-approach-1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#field1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello Bro!&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="iii-clear-and-type-approach-2">iii. clear and type - Approach 2.<a class="headerlink" href="#iii-clear-and-type-approach-2" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#field1&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">clickCount</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">});</span>
@@ -4400,7 +4422,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="iv-clear-and-type-approach-3">iv. clear and type - Approach 3.<a class="headerlink" href="#iv-clear-and-type-approach-3" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">press</span><span class="p">(</span><span class="s1">&#39;#field1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Control+A&#39;</span><span class="p">);</span>
@@ -4410,7 +4432,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="v-clear-and-type-approach-4">v. clear and type - Approach 4.<a class="headerlink" href="#v-clear-and-type-approach-4" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 4&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;clear and type - Approach 4&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#field1&#39;</span><span class="p">);</span>
@@ -4428,7 +4450,7 @@ Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h3 id="12-handling-upload-files">12. Handling Upload Files<a class="headerlink" href="#12-handling-upload-files" title="Permanent link">&para;</a></h3>
 <h4 id="i-single-file">i. Single file.<a class="headerlink" href="#i-single-file" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Upload Files - Single file&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Upload Files - Single file&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://davidwalsh.name/demo/multiple-file-upload.php&#39;</span><span class="p">);</span>
 
@@ -4441,7 +4463,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-multiple-files">ii. Multiple files.<a class="headerlink" href="#ii-multiple-files" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;Upload Files - Multiple files&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;Upload Files - Multiple files&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://davidwalsh.name/demo/multiple-file-upload.php&#39;</span><span class="p">);</span>
 
@@ -4455,7 +4477,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="iii-remove-uploaded-file">iii. Remove uploaded file.<a class="headerlink" href="#iii-remove-uploaded-file" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Upload Files - Remove uploaded file&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Upload Files - Remove uploaded file&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://davidwalsh.name/demo/multiple-file-upload.php&#39;</span><span class="p">);</span>
 
@@ -4477,21 +4499,21 @@ Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h3 id="13-capture-screenshots">13. Capture Screenshots<a class="headerlink" href="#13-capture-screenshots" title="Permanent link">&para;</a></h3>
 <h4 id="i-page-screenshot">i. Page Screenshot<a class="headerlink" href="#i-page-screenshot" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Page Screenshot&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Page Screenshot&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">screenshot</span><span class="p">({</span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tests/screenshots/HomePage_&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.png&#39;</span><span class="p">});</span>
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-full-page-screenshot">ii. Full Page Screenshot<a class="headerlink" href="#ii-full-page-screenshot" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Full Page Screenshot&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Full Page Screenshot&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">screenshot</span><span class="p">({</span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tests/screenshots/FullPage_&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.png&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">fullPage</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">});</span>
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="iii-element-screenshot">iii. Element Screenshot<a class="headerlink" href="#iii-element-screenshot" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Element Screenshot&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Element Screenshot&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://testautomationpractice.blogspot.com&#39;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;[name=&quot;BookTable&quot;]&#39;</span><span class="p">).</span><span class="nx">screenshot</span><span class="p">({</span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tests/screenshots/Element_&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.png&#39;</span><span class="p">});</span>
@@ -4503,7 +4525,7 @@ Master In JS            Amit        Javascript      1000
 <p><img alt="image" src="https://github.com/sachinknsachi/Playwright-tutorials/assets/106311617/dc252d60-c762-4196-b434-861cd13b5de9" /></p>
 <h3 id="16-tags">16. Tags<a class="headerlink" href="#16-tags" title="Permanent link">&para;</a></h3>
 <h4 id="i-script">i. Script<a class="headerlink" href="#i-script" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test_1 @sanity&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test_1&#39;</span><span class="p">);</span>
@@ -4526,21 +4548,21 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-to-run-only-sanity">ii. To run only @sanity<a class="headerlink" href="#ii-to-run-only-sanity" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">npx</span><span class="w"> </span><span class="nx">playwright</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="mo">05</span><span class="nx">_Tags</span><span class="w"> </span><span class="o">--</span><span class="nx">project</span><span class="o">=</span><span class="nx">chromium</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="w"> </span><span class="s1">&#39;@sanity&#39;</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">npx</span><span class="w"> </span><span class="nx">playwright</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="mo">05</span><span class="nx">_Tags</span><span class="w"> </span><span class="o">--</span><span class="nx">project</span><span class="o">=</span><span class="nx">chromium</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="w"> </span><span class="s1">&#39;@sanity&#39;</span>
 </code></pre></div>
 <h4 id="iii-to-run-only-reg">iii. To run only @reg<a class="headerlink" href="#iii-to-run-only-reg" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">npx</span><span class="w"> </span><span class="nx">playwright</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="mo">05</span><span class="nx">_Tags</span><span class="w"> </span><span class="o">--</span><span class="nx">project</span><span class="o">=</span><span class="nx">chromium</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="w"> </span><span class="s1">&#39;@reg&#39;</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">npx</span><span class="w"> </span><span class="nx">playwright</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="mo">05</span><span class="nx">_Tags</span><span class="w"> </span><span class="o">--</span><span class="nx">project</span><span class="o">=</span><span class="nx">chromium</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="w"> </span><span class="s1">&#39;@reg&#39;</span>
 </code></pre></div>
 <h4 id="iv-to-run-only-sanity-but-not-reg">iv. To run only @sanity but not @reg<a class="headerlink" href="#iv-to-run-only-sanity-but-not-reg" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">npx</span><span class="w"> </span><span class="nx">playwright</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="mo">05</span><span class="nx">_Tags</span><span class="w"> </span><span class="o">--</span><span class="nx">project</span><span class="o">=</span><span class="nx">chromium</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="w"> </span><span class="s1">&#39;@sanity&#39;</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="o">-</span><span class="nx">invert</span><span class="w"> </span><span class="s1">&#39;@reg&#39;</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">npx</span><span class="w"> </span><span class="nx">playwright</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="mo">05</span><span class="nx">_Tags</span><span class="w"> </span><span class="o">--</span><span class="nx">project</span><span class="o">=</span><span class="nx">chromium</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="w"> </span><span class="s1">&#39;@sanity&#39;</span><span class="w"> </span><span class="o">--</span><span class="nx">grep</span><span class="o">-</span><span class="nx">invert</span><span class="w"> </span><span class="s1">&#39;@reg&#39;</span>
 </code></pre></div>
 <h2 id="execute-javascript">Execute Javascript.<a class="headerlink" href="#execute-javascript" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;locator&#39;</span><span class="p">).</span><span class="nx">textContent</span><span class="p">;</span>
 <span class="p">});</span>
 </code></pre></div>
 <h2 id="beforeeach-aftereach-beforeall-afterall">BeforeEach, AfterEach, BeforeAll, AfterAll.<a class="headerlink" href="#beforeeach-aftereach-beforeall-afterall" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="kd">let</span><span class="w"> </span><span class="nx">page</span><span class="p">;</span>
 
@@ -4595,7 +4617,7 @@ Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h2 id="grouping-tests">Grouping Tests<a class="headerlink" href="#grouping-tests" title="Permanent link">&para;</a></h2>
 <h3 id="1-describe-block">1. Describe Block<a class="headerlink" href="#1-describe-block" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="c1">// BeforeAll --------------------------------------------------------</span>
 <span class="nx">test</span><span class="p">.</span><span class="nx">beforeAll</span><span class="p">(</span><span class="s1">&#39;beforeAll&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browser</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -4649,7 +4671,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="2-execute-specific-describe-block-testdescribeonly">2. Execute Specific Describe Block (test.describe.only)<a class="headerlink" href="#2-execute-specific-describe-block-testdescribeonly" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">describe</span><span class="p">.</span><span class="nx">only</span><span class="p">(</span><span class="s1">&#39;Group-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">describe</span><span class="p">.</span><span class="nx">only</span><span class="p">(</span><span class="s1">&#39;Group-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="c1">// test_1 -------------------------------------------------------</span>
 <span class="w">    </span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -4664,7 +4686,7 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="3-skip-specific-describe-block-testdescribeskip">3. Skip Specific Describe Block (test.describe.skip)<a class="headerlink" href="#3-skip-specific-describe-block-testdescribeskip" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">describe</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;Group-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">describe</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;Group-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="c1">// test_3 -------------------------------------------------------</span>
 <span class="w">    </span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -4680,18 +4702,18 @@ Master In JS            Amit        Javascript      1000
 </code></pre></div>
 <h2 id="annotations-only-skip-fail-fixme-slow">Annotations | Only, Skip, Fail, Fixme &amp; Slow.<a class="headerlink" href="#annotations-only-skip-fail-fixme-slow" title="Permanent link">&para;</a></h2>
 <h3 id="1-only-runs-only-the-specific-test-and-skips-rest">1. Only - Runs only the specific test and skips rest.<a class="headerlink" href="#1-only-runs-only-the-specific-test-and-skips-rest" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">only</span><span class="p">(</span><span class="s1">&#39;Test-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">only</span><span class="p">(</span><span class="s1">&#39;Test-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test-1()&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="2-skip-skips-the-specific-test">2. Skip - Skips the specific test.<a class="headerlink" href="#2-skip-skips-the-specific-test" title="Permanent link">&para;</a></h3>
 <h4 id="i-approach-1">i. Approach 1.<a class="headerlink" href="#i-approach-1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;Test-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">(</span><span class="s1">&#39;Test-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test-2()&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="ii-approach-2">ii. Approach 2.<a class="headerlink" href="#ii-approach-2" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">browserName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;chromium&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nx">test</span><span class="p">.</span><span class="nx">skip</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
@@ -4699,31 +4721,31 @@ Master In JS            Amit        Javascript      1000
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="3-fail-expect-the-test-to-fail">3. Fail - Expect the test to fail.<a class="headerlink" href="#3-fail-expect-the-test-to-fail" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-4 | Approach-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<p><div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-4 | Approach-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">test</span><span class="p">.</span><span class="nx">fail</span><span class="p">();</span>
 <span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test-4()&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="s1">&#39;Test-4 | Approach-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="s1">&#39;Test-4 | Approach-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test-4()&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div></p>
 <h3 id="4-fixme-refers-this-test-needs-to-be-fixed-skips-the-test">4. Fixme - Refers this test needs to be fixed &amp; skips the test.<a class="headerlink" href="#4-fixme-refers-this-test-needs-to-be-fixed-skips-the-test" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-5 | Approach-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<p><div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-5 | Approach-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">test</span><span class="p">.</span><span class="nx">fixme</span><span class="p">();</span>
 <span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test-5()&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">fixme</span><span class="p">(</span><span class="s1">&#39;Test-5 | Approach-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">fixme</span><span class="p">(</span><span class="s1">&#39;Test-5 | Approach-2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test-5()&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div></p>
 <h3 id="5-slow-increase-the-time-to-3x">5. Slow - Increase the time to 3x.<a class="headerlink" href="#5-slow-increase-the-time-to-3x" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-6&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<p><div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-6&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browserName</span><span class="p">},</span><span class="w"> </span><span class="nx">testInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">testInfo</span><span class="p">.</span><span class="nx">timeout</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">test</span><span class="p">.</span><span class="nx">slow</span><span class="p">();</span>
@@ -4739,7 +4761,7 @@ Test-6()
 </code></pre></div></p>
 <h2 id="multiple-pagestabs">Multiple Pages/Tabs<a class="headerlink" href="#multiple-pagestabs" title="Permanent link">&para;</a></h2>
 <h3 id="1-browser-context-creating-multiple-pages">1. Browser Context &amp; Creating Multiple pages<a class="headerlink" href="#1-browser-context-creating-multiple-pages" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">,</span><span class="w"> </span><span class="nx">chromium</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">,</span><span class="w"> </span><span class="nx">chromium</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Browser Context &amp; Multiple pages&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
@@ -4754,7 +4776,7 @@ Test-6()
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="2-handleing-multiple-pagestabs">2. Handleing Multiple Pages/Tabs<a class="headerlink" href="#2-handleing-multiple-pagestabs" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Handleing Multiple Pages/Tabs&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">page</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
@@ -4804,10 +4826,10 @@ Test-6()
 <p><img src="https://github.com/sachinknsachi/Playwright-tutorials/assets/106311617/ac8b5c16-5257-4eef-ae1a-823198b4c712" width="700"></p>
 <h2 id="reporters-allure-report">Reporters | Allure Report.<a class="headerlink" href="#reporters-allure-report" title="Permanent link">&para;</a></h2>
 <h3 id="1-execute-below-command-to-install-allure-playwright-it-is-used-to-generate-allure-report-files">1. Execute below command to install allure-playwright (It is used to generate allure report files).<a class="headerlink" href="#1-execute-below-command-to-install-allure-playwright-it-is-used-to-generate-allure-report-files" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">npm</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">-</span><span class="nx">D</span><span class="w"> </span><span class="err">@</span><span class="nx">playwright</span><span class="o">/</span><span class="nx">test</span><span class="w"> </span><span class="nx">allure</span><span class="o">-</span><span class="nx">playwright</span>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">i</span> <span class="o">-</span><span class="n">D</span> <span class="nd">@playwright</span><span class="o">/</span><span class="n">test</span> <span class="n">allure</span><span class="o">-</span><span class="n">playwright</span>
 </code></pre></div>
 <h3 id="2-execute-below-command-to-install-allure-commandline-it-is-used-to-generate-open-allure-report">2. Execute below command to install allure-commandline (It is used to generate &amp; open allure report).<a class="headerlink" href="#2-execute-below-command-to-install-allure-commandline-it-is-used-to-generate-open-allure-report" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">g</span><span class="w"> </span><span class="nx">allure</span><span class="o">-</span><span class="nx">commandline</span><span class="w"> </span><span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">allure</span><span class="o">-</span><span class="n">commandline</span> <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">dev</span>
 </code></pre></div>
 <h3 id="3-add-allure-playwright-into-playwrightconfigjs">3. Add allure-playwright into <em>playwright.config.js</em><a class="headerlink" href="#3-add-allure-playwright-into-playwrightconfigjs" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -4823,14 +4845,14 @@ Test-6()
 <span class="p">}</span>
 </code></pre></div></p>
 <h3 id="4-generate-allure-report">4. Generate Allure Report.<a class="headerlink" href="#4-generate-allure-report" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">allure</span><span class="w"> </span><span class="nx">generate</span><span class="w"> </span><span class="nx">my</span><span class="o">-</span><span class="nx">allure</span><span class="o">-</span><span class="nx">results</span><span class="w"> </span><span class="o">-</span><span class="nx">o</span><span class="w"> </span><span class="nx">allure</span><span class="o">-</span><span class="nx">report</span><span class="w"> </span><span class="o">--</span><span class="nx">clean</span>
+<div class="highlight"><pre><span></span><code><span class="n">allure</span> <span class="n">generate</span> <span class="n">my</span><span class="o">-</span><span class="n">allure</span><span class="o">-</span><span class="n">results</span> <span class="o">-</span><span class="n">o</span> <span class="n">allure</span><span class="o">-</span><span class="n">report</span> <span class="o">--</span><span class="n">clean</span>
 </code></pre></div>
 <h3 id="5-open-allure-report">5. Open Allure Report.<a class="headerlink" href="#5-open-allure-report" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">allure</span><span class="w"> </span><span class="nx">open</span><span class="w"> </span><span class="nx">allure</span><span class="o">-</span><span class="nx">report</span>
+<div class="highlight"><pre><span></span><code><span class="n">allure</span> <span class="nb">open</span> <span class="n">allure</span><span class="o">-</span><span class="n">report</span>
 </code></pre></div>
 <h2 id="retry-tests">Retry Tests.<a class="headerlink" href="#retry-tests" title="Permanent link">&para;</a></h2>
 <h4 id="example-tests">Example tests<a class="headerlink" href="#example-tests" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Test-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
@@ -4868,7 +4890,7 @@ Test-6()
 <span class="p">})</span>
 </code></pre></div>
 <h4 id="configuration-in-playwrightconfigjs">Configuration in <em>playwright.config.js</em><a class="headerlink" href="#configuration-in-playwrightconfigjs" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="c1">// retries: process.env.CI ? 2 : 0,</span>
 <span class="w">    </span><span class="nx">retries</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="c1">// Retries 1 time.</span>
 <span class="p">}</span>
@@ -4893,7 +4915,7 @@ Running 5 tests using 1 worker
 </code></pre></div>
 <h2 id="api-testing">API Testing<a class="headerlink" href="#api-testing" title="Permanent link">&para;</a></h2>
 <h3 id="1-get-request">1. GET Request<a class="headerlink" href="#1-get-request" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">baseURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://reqres.in&#39;</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">userId</span><span class="p">;</span>
@@ -4913,7 +4935,7 @@ Running 5 tests using 1 worker
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="2-post-request">2. POST Request<a class="headerlink" href="#2-post-request" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Create User&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">request</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Create User&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">request</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">baseURL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/api/users&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -4939,7 +4961,7 @@ Running 5 tests using 1 worker
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="3-put-request">3. PUT Request<a class="headerlink" href="#3-put-request" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Update User&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">request</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Update User&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">request</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">baseURL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/api/users/&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">userId</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -4963,48 +4985,46 @@ Running 5 tests using 1 worker
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="4-delete-request">4. Delete Request<a class="headerlink" href="#4-delete-request" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Delete User&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">request</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Delete User&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">request</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="ow">delete</span><span class="p">(</span><span class="nx">baseURL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/api/users/&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">userId</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">()).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">204</span><span class="p">);</span>
 <span class="p">})</span>
 </code></pre></div>
 <h2 id="api-testing-advanced">API Testing - Advanced<a class="headerlink" href="#api-testing-advanced" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="gi">+ https://rahulshettyacademy.com/client/auth/login</span>
-````
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="nx">https</span><span class="o">:</span><span class="c1">//rahulshettyacademy.com/client/auth/login</span>
+</span></code></pre></div>
+<h3 id="1-login-using-api-to-bypass-the-login-page">1. Login using API to bypass the login page.<a class="headerlink" href="#1-login-using-api-to-bypass-the-login-page" title="Permanent link">&para;</a></h3>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@playwright/test&quot;</span><span class="p">);</span>
 
-### 1. Login using API to bypass the login page.
-```javascript
-const { test } = require(&quot;@playwright/test&quot;);
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;Login using API to bypass the login page&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
-test(&quot;Login using API to bypass the login page&quot;, async ({ request, page }) =&gt; {
-
-<span class="w"> </span> // Get the login token using API
-<span class="w"> </span> const response = await request.post(
-<span class="w"> </span>   &quot;https://rahulshettyacademy.com/api/ecom/auth/login&quot;,
-<span class="w"> </span>   {
-<span class="w"> </span>     data: {
-<span class="w"> </span>       userEmail: &quot;sachinknsachi@gmail.com&quot;,
-<span class="w"> </span>       userPassword: &quot;Sachin@123&quot;,
-<span class="w"> </span>     },
-<span class="w"> </span>   }
-<span class="w"> </span> );
-<span class="w"> </span> let token = (await response.json()).token;
+<span class="w">  </span><span class="c1">// Get the login token using API</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">&quot;https://rahulshettyacademy.com/api/ecom/auth/login&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">userEmail</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sachinknsachi@gmail.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">userPassword</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Sachin@123&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()).</span><span class="nx">token</span><span class="p">;</span>
 
 
-<span class="w"> </span> // Set the login token into browser
-<span class="w"> </span> await page.addInitScript((value) =&gt; {
-<span class="w"> </span>   window.localStorage.setItem(&quot;token&quot;, value);
-<span class="w"> </span> }, token);
+<span class="w">  </span><span class="c1">// Set the login token into browser</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">addInitScript</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&quot;token&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="nx">token</span><span class="p">);</span>
 
 
-<span class="w"> </span> // open the home page url, it will open without login.
-<span class="w"> </span> await page.goto(&quot;https://rahulshettyacademy.com/client&quot;);
+<span class="w">  </span><span class="c1">// open the home page url, it will open without login.</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s2">&quot;https://rahulshettyacademy.com/client&quot;</span><span class="p">);</span>
 
-<span class="w"> </span> await page.pause();
-});
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">pause</span><span class="p">();</span>
+<span class="p">});</span>
 </code></pre></div>
 <h3 id="2-use-storagestate-using-api-to-bypass-the-login-page">2. Use StorageState using API to bypass the login page.<a class="headerlink" href="#2-use-storagestate-using-api-to-bypass-the-login-page" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@playwright/test&quot;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@playwright/test&quot;</span><span class="p">);</span>
 
 <span class="nx">test</span><span class="p">.</span><span class="nx">beforeAll</span><span class="p">(</span><span class="s1">&#39;Get the storage state json file&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="nx">browser</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 
@@ -5034,7 +5054,7 @@ test(&quot;Login using API to bypass the login page&quot;, async ({ request, pag
 <span class="p">});</span>
 </code></pre></div>
 <h3 id="3-intercepting-request">3. Intercepting Request.<a class="headerlink" href="#3-intercepting-request" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVhY2ZiMWFlMmFmZDRjMGJlZDMxNWMiLCJ1c2VyRW1haWwiOiJzYWNoaW5rbnNhY2hpQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjk5MTY0MjM2MjgsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3MTcyNTQyODMsImV4cCI6MTc0ODgxMTg4M30.9dzH4KFxbCqkwH27j46RaxTPUR784y8SJdQLfr023J4&quot;</span><span class="p">;</span>
 
@@ -5062,7 +5082,7 @@ test(&quot;Login using API to bypass the login page&quot;, async ({ request, pag
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="4-intercepting-response-manipulating-the-response">4. Intercepting Response - Manipulating the response.<a class="headerlink" href="#4-intercepting-response-manipulating-the-response" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVhY2ZiMWFlMmFmZDRjMGJlZDMxNWMiLCJ1c2VyRW1haWwiOiJzYWNoaW5rbnNhY2hpQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjk5MTY0MjM2MjgsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3MTcyNTQyODMsImV4cCI6MTc0ODgxMTg4M30.9dzH4KFxbCqkwH27j46RaxTPUR784y8SJdQLfr023J4&quot;</span><span class="p">;</span>
 
@@ -5090,7 +5110,7 @@ test(&quot;Login using API to bypass the login page&quot;, async ({ request, pag
 <span class="p">})</span>
 </code></pre></div>
 <h3 id="5-intercepting-response-aborting-the-response">5. Intercepting Response - Aborting the response.<a class="headerlink" href="#5-intercepting-response-aborting-the-response" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVhY2ZiMWFlMmFmZDRjMGJlZDMxNWMiLCJ1c2VyRW1haWwiOiJzYWNoaW5rbnNhY2hpQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjk5MTY0MjM2MjgsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3MTcyNTQyODMsImV4cCI6MTc0ODgxMTg4M30.9dzH4KFxbCqkwH27j46RaxTPUR784y8SJdQLfr023J4&quot;</span><span class="p">;</span>
 
@@ -5117,7 +5137,7 @@ test(&quot;Login using API to bypass the login page&quot;, async ({ request, pag
 </code></pre></div>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <h3 id="1-all-playwright-page-fixture-methods">1. All Playwright page fixture methods<a class="headerlink" href="#1-all-playwright-page-fixture-methods" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="nx">locator</span><span class="p">);</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="nx">locator</span><span class="p">);</span>
 
 <span class="nx">page</span><span class="p">.</span><span class="nx">check</span><span class="p">(</span><span class="nx">locator</span><span class="p">);</span>
 <span class="nx">page</span><span class="p">.</span><span class="nx">uncheck</span><span class="p">(</span><span class="nx">locator</span><span class="p">);</span>
@@ -5291,7 +5311,7 @@ await multiSelectDdLocator .selectOption(['R', 'G']);
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2026 Sachin KN
+      &copy; 2026 <a href="https://sachinkn.in"  target="_blank" rel="noopener">Sachin Kn</a>
     </div>
   
   
