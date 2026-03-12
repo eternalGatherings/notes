@@ -895,7 +895,90 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+
+<h1>404 – Page not found</h1>
+
+<p>The page you are looking for does not exist.</p>
+
+<p>You can try one of the following:</p>
+
+<ul>
+    <li>🔎 Search for the topic using the above search bar.</li>
+    <li>📚 Browse the suggested pages.</li>
+    <li>🏠 Go back to the <a href="/">Homepage</a> or <a href="/Notes/gitCommands">All Notes Page</a>.</li>
+</ul>
+
+<input type="text" id="search-input" placeholder="Search the documentation..." hidden style="padding: 10px; width: 350px; font-size: 16px; margin-top: 10px" />
+
+<h3 style="margin-top: 30px">Suggested pages</h3>
+
+<ul id="results"></ul>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+    let index;
+    let documents;
+
+    fetch("/search/search_index.json")
+        .then((res) => res.json())
+        .then((data) => {
+            documents = data.docs;
+
+            index = lunr(function () {
+                this.ref("location");
+                this.field("title");
+                this.field("text");
+
+                documents.forEach((doc) => this.add(doc));
+            });
+
+            autoSearch();
+        });
+
+    function normalizeQuery(query) {
+        return query
+            .toLowerCase()
+            .replace(/[-_/]/g, " ")
+            .replace(/[^\w\s]/g, " ")
+            .trim();
+    }
+
+    function performSearch(query) {
+        query = normalizeQuery(query);
+
+        if (!query) return;
+
+        let results = index.search(query);
+
+        let list = document.getElementById("results");
+
+        list.innerHTML = "";
+
+        results.slice(0, 10).forEach((result) => {
+            let doc = documents.find((d) => d.location === result.ref);
+
+            let li = document.createElement("li");
+
+            li.innerHTML = `<a href="${doc.location}">${doc.title}</a>`;
+
+            list.appendChild(li);
+        });
+    }
+
+    document.getElementById("search-input").addEventListener("input", function () {
+        performSearch(this.value);
+    });
+
+    function autoSearch() {
+        let query = decodeURIComponent(window.location.pathname).replace(".html", "").replaceAll("/", " ");
+
+        document.getElementById("search-input").value = query;
+
+        performSearch(query);
+    }
+</script>
+
 
               </article>
             </div>
